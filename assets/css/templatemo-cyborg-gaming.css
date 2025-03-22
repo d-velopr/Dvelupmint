@@ -198,6 +198,21 @@ p {
   color: #e75e8d;
 }
 
+#checkoutButton{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  background-color: rgba(31,33,34,0.95);
+  display: inline-block;
+  color: #ec6090;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
 .border-no-active a {
   border-color: #666;
   color: #666;
