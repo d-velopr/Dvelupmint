@@ -41,13 +41,82 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
-    <!--
 
-TemplateMo 579 Cyborg Gaming
+    <style>
+      /* Scoped to this page. The shared stylesheet is not modified. */
 
-https://templatemo.com/tm-579-cyborg-gaming
+      /* The six "What You Get" cards describe services with no photograph,
+         so an icon tile stands in for the card image. The 183/310 ratio is
+         the ratio of the template image it replaces, so the carousel keeps
+         its original card height. */
+      .outcome-tile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 183 / 310;
+        border-radius: 23px;
+        background-color: #27292a;
+        border: 1px solid #353637;
+      }
+      .outcome-tile i {
+        font-size: 52px;
+        line-height: 1;
+        color: #ec6090;
+      }
 
--->
+      /* Round icon badge on the same 46px footprint as the avatar it
+         replaces in the "Included With Every Build" list. */
+      .included-badge {
+        display: inline-block;
+        width: 46px;
+        height: 46px;
+        line-height: 44px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        background-color: #27292a;
+        border: 1px solid #353637;
+        margin-right: 15px;
+      }
+      .included-badge i {
+        font-size: 18px;
+        color: #ec6090;
+      }
+
+      /* The labels in this list are longer than the template's one-word
+         streamer names and wrap to a second line, so the panel has to grow
+         past the fixed height the shared stylesheet pins it to. */
+      .top-streamers {
+        max-height: none;
+      }
+      /* ...and a wrapped label must align under itself, not under the number.
+         Shrink-to-fit, capped clear of the floated number and the 46px badge
+         so a long label wraps inside its own block instead of onto a new line. */
+      .top-streamers ul li h6 {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: calc(100% - 110px);
+      }
+
+      /* Knock-ons from the project cards below, which drop the template's
+         floating avatar and carry real outbound links. */
+      .live-stream .down-content h4 {
+        margin-left: 0;
+      }
+      .live-stream .down-content h4 a {
+        color: #fff;
+        transition: color 0.3s;
+      }
+      .live-stream .down-content h4 a:hover {
+        color: #ec6090;
+      }
+      /* Real screenshots vary in aspect ratio where the template's square
+         thumbnails did not. Normalise so a row of cards lines up. */
+      .live-stream .thumb img {
+        aspect-ratio: 2 / 1;
+        object-fit: cover;
+      }
+    </style>
   </head>
 
   <body>
@@ -116,91 +185,88 @@ https://templatemo.com/tm-579-cyborg-gaming
       <div class="row">
         <div class="col-lg-12">
           <div class="page-content">
-            <!-- ***** Featured Games Start ***** -->
+            <!-- ***** What You Get Start ***** -->
             <div class="row">
               <div class="col-lg-8">
                 <div class="featured-games header-text">
                   <div class="heading-section">
-                    <h4><em>Live</em> Streams</h4>
+                    <h4><em>What</em> You Get</h4>
                   </div>
                   <div class="owl-features owl-carousel">
                     <div class="item">
                       <div class="thumb">
-                        <img src="assets/images/featured-01.jpg" alt="" />
-                        <div class="hover-effect">
-                          <h6>2.4K Streaming</h6>
+                        <div class="outcome-tile">
+                          <i class="fa fa-table" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <h4>CS-GO<br /><span>249K Downloads</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
+                      <h4>
+                        Google Sheets As Your Database<br /><span
+                          >Edit a spreadsheet, your site updates</span
+                        >
+                      </h4>
                     </div>
                     <div class="item">
                       <div class="thumb">
-                        <img src="assets/images/featured-02.jpg" alt="" />
-                        <div class="hover-effect">
-                          <h6>2.4K Streaming</h6>
+                        <div class="outcome-tile">
+                          <i
+                            class="fa fa-mobile-screen-button"
+                            aria-hidden="true"
+                          ></i>
                         </div>
                       </div>
-                      <h4>Gamezer<br /><span>249K Downloads</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
+                      <h4>
+                        Mobile-First Build<br /><span
+                          >Looks right on every screen</span
+                        >
+                      </h4>
                     </div>
                     <div class="item">
                       <div class="thumb">
-                        <img src="assets/images/featured-03.jpg" alt="" />
-                        <div class="hover-effect">
-                          <h6>2.4K Streaming</h6>
+                        <div class="outcome-tile">
+                          <i class="fa fa-line-chart" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <h4>Island Rusty<br /><span>249K Downloads</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
+                      <h4>
+                        SEO &amp; Analytics Installed<br /><span
+                          >Ranked and measured from day one</span
+                        >
+                      </h4>
                     </div>
                     <div class="item">
                       <div class="thumb">
-                        <img src="assets/images/featured-01.jpg" alt="" />
-                        <div class="hover-effect">
-                          <h6>2.4K Streaming</h6>
+                        <div class="outcome-tile">
+                          <i class="fa fa-server" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <h4>CS-GO<br /><span>249K Downloads</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
+                      <h4>
+                        Hosting + Domain Handled<br /><span
+                          >We set it up, you own it</span
+                        >
+                      </h4>
                     </div>
                     <div class="item">
                       <div class="thumb">
-                        <img src="assets/images/featured-02.jpg" alt="" />
-                        <div class="hover-effect">
-                          <h6>2.4K Streaming</h6>
+                        <div class="outcome-tile">
+                          <i class="fa fa-credit-card" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <h4>Gamezer<br /><span>249K Downloads</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
+                      <h4>
+                        Payments Ready<br /><span
+                          >Stripe checkout when you need it</span
+                        >
+                      </h4>
                     </div>
                     <div class="item">
                       <div class="thumb">
-                        <img src="assets/images/featured-03.jpg" alt="" />
-                        <div class="hover-effect">
-                          <h6>2.4K Streaming</h6>
+                        <div class="outcome-tile">
+                          <i class="fa fa-life-ring" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <h4>Island Rusty<br /><span>249K Downloads</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
+                      <h4>
+                        Ongoing Support<br /><span
+                          >Edits and fixes after launch</span
+                        >
+                      </h4>
                     </div>
                   </div>
                 </div>
@@ -208,119 +274,89 @@ https://templatemo.com/tm-579-cyborg-gaming
               <div class="col-lg-4">
                 <div class="top-streamers">
                   <div class="heading-section">
-                    <h4><em>Top</em> Streamers</h4>
+                    <h4><em>Included</em> With Every Build</h4>
                   </div>
                   <ul>
                     <li>
                       <span>01</span>
-                      <img
-                        src="assets/images/avatar-01.jpg"
-                        alt=""
-                        style="
-                          max-width: 46px;
-                          border-radius: 50%;
-                          margin-right: 15px;
-                        "
-                      />
-                      <h6><i class="fa fa-check"></i> LahutaM</h6>
-                      <div class="main-button">
-                        <a href="#">Follow</a>
+                      <div class="included-badge">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
                       </div>
+                      <h6><i class="fa fa-check"></i> SSL Certificate</h6>
                     </li>
                     <li>
                       <span>02</span>
-                      <img
-                        src="assets/images/avatar-02.jpg"
-                        alt=""
-                        style="
-                          max-width: 46px;
-                          border-radius: 50%;
-                          margin-right: 15px;
-                        "
-                      />
-                      <h6><i class="fa fa-check"></i> Kengan</h6>
-                      <div class="main-button">
-                        <a href="#">Follow</a>
+                      <div class="included-badge">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
                       </div>
+                      <h6><i class="fa fa-check"></i> Contact Form</h6>
                     </li>
                     <li>
                       <span>03</span>
-                      <img
-                        src="assets/images/avatar-03.jpg"
-                        alt=""
-                        style="
-                          max-width: 46px;
-                          border-radius: 50%;
-                          margin-right: 15px;
-                        "
-                      />
-                      <h6><i class="fa fa-check"></i> Areluwa</h6>
-                      <div class="main-button">
-                        <a href="#">Follow</a>
+                      <div class="included-badge">
+                        <i class="fa fa-line-chart" aria-hidden="true"></i>
                       </div>
+                      <h6><i class="fa fa-check"></i> Google Analytics</h6>
                     </li>
                     <li>
                       <span>04</span>
-                      <img
-                        src="assets/images/avatar-04.jpg"
-                        alt=""
-                        style="
-                          max-width: 46px;
-                          border-radius: 50%;
-                          margin-right: 15px;
-                        "
-                      />
-                      <h6><i class="fa fa-check"></i> Omeg</h6>
-                      <div class="main-button">
-                        <a href="#">Follow</a>
+                      <div class="included-badge">
+                        <i class="fa fa-bolt" aria-hidden="true"></i>
                       </div>
+                      <h6><i class="fa fa-check"></i> Speed Optimization</h6>
                     </li>
                     <li>
                       <span>05</span>
-                      <img
-                        src="assets/images/avatar-01.jpg"
-                        alt=""
-                        style="
-                          max-width: 46px;
-                          border-radius: 50%;
-                          margin-right: 15px;
-                        "
-                      />
-                      <h6><i class="fa fa-check"></i> GangTeam</h6>
-                      <div class="main-button">
-                        <a href="#">Follow</a>
+                      <div class="included-badge">
+                        <i class="fa fa-headset" aria-hidden="true"></i>
                       </div>
+                      <h6>
+                        <i class="fa fa-check"></i> 30-Day Post-Launch Support
+                      </h6>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <!-- ***** Featured Games End ***** -->
+            <!-- ***** What You Get End ***** -->
 
-            <!-- ***** Live Stream Start ***** -->
+            <!-- ***** Live Client Sites Start ***** -->
             <div class="live-stream">
               <div class="col-lg-12">
                 <div class="heading-section">
-                  <h4><em>Most Popular</em> Live Stream</h4>
+                  <h4><em>Live</em> Client Sites</h4>
                 </div>
               </div>
               <div class="row">
                 <div class="col-lg-3 col-sm-6">
                   <div class="item">
                     <div class="thumb">
-                      <img src="assets/images/stream-05.jpg" alt="" />
+                      <img src="assets/images/AEOC.jpeg" alt="AE-OC" />
                       <div class="hover-effect">
                         <div class="content">
                           <div class="live">
-                            <a href="#">Live</a>
+                            <a
+                              href="https://automotiveentertainmentoc.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Live</a
+                            >
                           </div>
                           <ul>
                             <li>
-                              <a href="#"><i class="fa fa-eye"></i> 1.2K</a>
+                              <a
+                                href="https://automotiveentertainmentoc.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-eye"></i> 42.5K</a
+                              >
                             </li>
                             <li>
-                              <a href="#"
-                                ><i class="fa fa-gamepad"></i> CS-GO</a
+                              <a
+                                href="https://automotiveentertainmentoc.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-code"></i> Events</a
                               >
                             </li>
                           </ul>
@@ -328,38 +364,49 @@ https://templatemo.com/tm-579-cyborg-gaming
                       </div>
                     </div>
                     <div class="down-content">
-                      <div class="avatar">
-                        <img
-                          src="assets/images/avatar-01.jpg"
-                          alt=""
-                          style="
-                            max-width: 46px;
-                            border-radius: 50%;
-                            float: left;
-                          "
-                        />
-                      </div>
-                      <span><i class="fa fa-check"></i> Kengan Omeg</span>
-                      <h4>Just Talking With Fans</h4>
+                      <h4>
+                        <a
+                          href="https://automotiveentertainmentoc.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >AE-OC</a
+                        >
+                      </h4>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                   <div class="item">
                     <div class="thumb">
-                      <img src="assets/images/stream-06.jpg" alt="" />
+                      <img
+                        src="assets/images/NeverEndingAR.jpeg"
+                        alt="Never Ending A&amp;R"
+                      />
                       <div class="hover-effect">
                         <div class="content">
                           <div class="live">
-                            <a href="#">Live</a>
+                            <a
+                              href="https://neverending-ar.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Live</a
+                            >
                           </div>
                           <ul>
                             <li>
-                              <a href="#"><i class="fa fa-eye"></i> 1.2K</a>
+                              <a
+                                href="https://neverending-ar.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-eye"></i> 13.7K</a
+                              >
                             </li>
                             <li>
-                              <a href="#"
-                                ><i class="fa fa-gamepad"></i> CS-GO</a
+                              <a
+                                href="https://neverending-ar.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-code"></i> Music</a
                               >
                             </li>
                           </ul>
@@ -367,38 +414,46 @@ https://templatemo.com/tm-579-cyborg-gaming
                       </div>
                     </div>
                     <div class="down-content">
-                      <div class="avatar">
-                        <img
-                          src="assets/images/avatar-02.jpg"
-                          alt=""
-                          style="
-                            max-width: 46px;
-                            border-radius: 50%;
-                            float: left;
-                          "
-                        />
-                      </div>
-                      <span><i class="fa fa-check"></i> LahutaMalc</span>
-                      <h4>CS-GO 36 Hours Live Stream</h4>
+                      <h4>
+                        <a
+                          href="https://neverending-ar.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >NEVER ENDING A&amp;R</a
+                        >
+                      </h4>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                   <div class="item">
                     <div class="thumb">
-                      <img src="assets/images/stream-07.jpg" alt="" />
+                      <img src="assets/images/LAURA.jpeg" alt="L.A.U.R.A" />
                       <div class="hover-effect">
                         <div class="content">
                           <div class="live">
-                            <a href="#">Live</a>
+                            <a
+                              href="https://www.laurala.org/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Live</a
+                            >
                           </div>
                           <ul>
                             <li>
-                              <a href="#"><i class="fa fa-eye"></i> 1.2K</a>
+                              <a
+                                href="https://www.laurala.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-eye"></i> 33.9K</a
+                              >
                             </li>
                             <li>
-                              <a href="#"
-                                ><i class="fa fa-gamepad"></i> CS-GO</a
+                              <a
+                                href="https://www.laurala.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-code"></i> Nonprofit</a
                               >
                             </li>
                           </ul>
@@ -406,38 +461,49 @@ https://templatemo.com/tm-579-cyborg-gaming
                       </div>
                     </div>
                     <div class="down-content">
-                      <div class="avatar">
-                        <img
-                          src="assets/images/avatar-03.jpg"
-                          alt=""
-                          style="
-                            max-width: 46px;
-                            border-radius: 50%;
-                            float: left;
-                          "
-                        />
-                      </div>
-                      <span><i class="fa fa-check"></i> Areluwa</span>
-                      <h4>Maybe Nathej Allnight Chillin'</h4>
+                      <h4>
+                        <a
+                          href="https://www.laurala.org/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >L.A.U.R.A</a
+                        >
+                      </h4>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                   <div class="item">
                     <div class="thumb">
-                      <img src="assets/images/stream-08.jpg" alt="" />
+                      <img
+                        src="assets/images/OnlineStore.jpeg"
+                        alt="Online Store"
+                      />
                       <div class="hover-effect">
                         <div class="content">
                           <div class="live">
-                            <a href="#">Live</a>
+                            <a
+                              href="https://d-velopr.github.io/Slattson/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Live</a
+                            >
                           </div>
                           <ul>
                             <li>
-                              <a href="#"><i class="fa fa-eye"></i> 1.2K</a>
+                              <a
+                                href="https://d-velopr.github.io/Slattson/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-eye"></i> 7.2K</a
+                              >
                             </li>
                             <li>
-                              <a href="#"
-                                ><i class="fa fa-gamepad"></i> CS-GO</a
+                              <a
+                                href="https://d-velopr.github.io/Slattson/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-code"></i> E-Commerce</a
                               >
                             </li>
                           </ul>
@@ -445,38 +511,46 @@ https://templatemo.com/tm-579-cyborg-gaming
                       </div>
                     </div>
                     <div class="down-content">
-                      <div class="avatar">
-                        <img
-                          src="assets/images/avatar-04.jpg"
-                          alt=""
-                          style="
-                            max-width: 46px;
-                            border-radius: 50%;
-                            float: left;
-                          "
-                        />
-                      </div>
-                      <span><i class="fa fa-check"></i> NewGangTeam</span>
-                      <h4>Live Streaming Till Morning</h4>
+                      <h4>
+                        <a
+                          href="https://d-velopr.github.io/Slattson/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Online Store</a
+                        >
+                      </h4>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                   <div class="item">
                     <div class="thumb">
-                      <img src="assets/images/stream-07.jpg" alt="" />
+                      <img src="assets/images/RHACLA.jpeg" alt="R.H.A.C." />
                       <div class="hover-effect">
                         <div class="content">
                           <div class="live">
-                            <a href="#">Live</a>
+                            <a
+                              href="https://d-velopr.github.io/RHAC/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Live</a
+                            >
                           </div>
                           <ul>
                             <li>
-                              <a href="#"><i class="fa fa-eye"></i> 1.2K</a>
+                              <a
+                                href="https://d-velopr.github.io/RHAC/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-eye"></i> 19.1K</a
+                              >
                             </li>
                             <li>
-                              <a href="#"
-                                ><i class="fa fa-gamepad"></i> CS-GO</a
+                              <a
+                                href="https://d-velopr.github.io/RHAC/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-code"></i> Nonprofit</a
                               >
                             </li>
                           </ul>
@@ -484,38 +558,46 @@ https://templatemo.com/tm-579-cyborg-gaming
                       </div>
                     </div>
                     <div class="down-content">
-                      <div class="avatar">
-                        <img
-                          src="assets/images/avatar-01.jpg"
-                          alt=""
-                          style="
-                            max-width: 46px;
-                            border-radius: 50%;
-                            float: left;
-                          "
-                        />
-                      </div>
-                      <span><i class="fa fa-check"></i> Kengan Omeg</span>
-                      <h4>Just Talking With Fans</h4>
+                      <h4>
+                        <a
+                          href="https://d-velopr.github.io/RHAC/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >R.H.A.C.</a
+                        >
+                      </h4>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                   <div class="item">
                     <div class="thumb">
-                      <img src="assets/images/stream-08.jpg" alt="" />
+                      <img src="assets/images/TG6.jpeg" alt="TG6" />
                       <div class="hover-effect">
                         <div class="content">
                           <div class="live">
-                            <a href="#">Live</a>
+                            <a
+                              href="https://teamglitch6.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Live</a
+                            >
                           </div>
                           <ul>
                             <li>
-                              <a href="#"><i class="fa fa-eye"></i> 1.2K</a>
+                              <a
+                                href="https://teamglitch6.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-eye"></i> 20.1K</a
+                              >
                             </li>
                             <li>
-                              <a href="#"
-                                ><i class="fa fa-gamepad"></i> CS-GO</a
+                              <a
+                                href="https://teamglitch6.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-code"></i> Media</a
                               >
                             </li>
                           </ul>
@@ -523,38 +605,46 @@ https://templatemo.com/tm-579-cyborg-gaming
                       </div>
                     </div>
                     <div class="down-content">
-                      <div class="avatar">
-                        <img
-                          src="assets/images/avatar-02.jpg"
-                          alt=""
-                          style="
-                            max-width: 46px;
-                            border-radius: 50%;
-                            float: left;
-                          "
-                        />
-                      </div>
-                      <span><i class="fa fa-check"></i> LahutaMalc</span>
-                      <h4>CS-GO 36 Hours Live Stream</h4>
+                      <h4>
+                        <a
+                          href="https://teamglitch6.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >TG6</a
+                        >
+                      </h4>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                   <div class="item">
                     <div class="thumb">
-                      <img src="assets/images/stream-05.jpg" alt="" />
+                      <img src="assets/images/TG6-dev.jpeg" alt="TG6-DEV" />
                       <div class="hover-effect">
                         <div class="content">
                           <div class="live">
-                            <a href="#">Live</a>
+                            <a
+                              href="https://tg6-dev.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Live</a
+                            >
                           </div>
                           <ul>
                             <li>
-                              <a href="#"><i class="fa fa-eye"></i> 1.2K</a>
+                              <a
+                                href="https://tg6-dev.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-eye"></i> 9.2K</a
+                              >
                             </li>
                             <li>
-                              <a href="#"
-                                ><i class="fa fa-gamepad"></i> CS-GO</a
+                              <a
+                                href="https://tg6-dev.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-code"></i> Agency</a
                               >
                             </li>
                           </ul>
@@ -562,38 +652,46 @@ https://templatemo.com/tm-579-cyborg-gaming
                       </div>
                     </div>
                     <div class="down-content">
-                      <div class="avatar">
-                        <img
-                          src="assets/images/avatar-03.jpg"
-                          alt=""
-                          style="
-                            max-width: 46px;
-                            border-radius: 50%;
-                            float: left;
-                          "
-                        />
-                      </div>
-                      <span><i class="fa fa-check"></i> Areluwa</span>
-                      <h4>Maybe Nathej Allnight Chillin'</h4>
+                      <h4>
+                        <a
+                          href="https://tg6-dev.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >TG6-DEV</a
+                        >
+                      </h4>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                   <div class="item">
                     <div class="thumb">
-                      <img src="assets/images/stream-06.jpg" alt="" />
+                      <img src="assets/images/NVOCC.png" alt="NVOCC" />
                       <div class="hover-effect">
                         <div class="content">
                           <div class="live">
-                            <a href="#">Live</a>
+                            <a
+                              href="https://github.com/d-velopr/nvocc"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >In Development</a
+                            >
                           </div>
                           <ul>
                             <li>
-                              <a href="#"><i class="fa fa-eye"></i> 1.2K</a>
+                              <a
+                                href="https://github.com/d-velopr/nvocc"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-eye"></i> N/A</a
+                              >
                             </li>
                             <li>
-                              <a href="#"
-                                ><i class="fa fa-gamepad"></i> CS-GO</a
+                              <a
+                                href="https://github.com/d-velopr/nvocc"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                ><i class="fa fa-code"></i> Logistics</a
                               >
                             </li>
                           </ul>
@@ -601,30 +699,25 @@ https://templatemo.com/tm-579-cyborg-gaming
                       </div>
                     </div>
                     <div class="down-content">
-                      <div class="avatar">
-                        <img
-                          src="assets/images/avatar-04.jpg"
-                          alt=""
-                          style="
-                            max-width: 46px;
-                            border-radius: 50%;
-                            float: left;
-                          "
-                        />
-                      </div>
-                      <span><i class="fa fa-check"></i> NewGangTeam</span>
-                      <h4>Live Streaming Till Morning</h4>
+                      <h4>
+                        <a
+                          href="https://github.com/d-velopr/nvocc"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >NVOCC</a
+                        >
+                      </h4>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="main-button">
-                    <a href="streams.html">Load More Streams</a>
+                    <a href="browse.html">See Packages</a>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- ***** Live Stream End ***** -->
+            <!-- ***** Live Client Sites End ***** -->
           </div>
         </div>
       </div>
@@ -635,16 +728,7 @@ https://templatemo.com/tm-579-cyborg-gaming
         <div class="row">
           <div class="col-lg-12">
             <p>
-              Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights
-              reserved.
-
-              <br />Design:
-              <a
-                href="https://templatemo.com"
-                target="_blank"
-                title="free CSS templates"
-                >TemplateMo</a
-              >
+              Copyright © 2032 <a href="#">Dvelupmint</a> . All rights reserved.
             </p>
           </div>
         </div>
