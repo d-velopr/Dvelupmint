@@ -25,7 +25,6 @@ Table of contents
 font & reset css
 --------------------------------------------- 
 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
 /* 
 ---------------------------------------------
 reset
@@ -832,6 +831,7 @@ Most Popular Style
   padding: 30px 15px;
   border-radius: 23px;
   margin-bottom: 30px;
+  height: calc(100% - 30px);
 }
 
 .most-popular .item .item {
@@ -841,8 +841,17 @@ Most Popular Style
   margin-bottom: 0px;
 }
 
+.most-popular .card-link {
+  display: block;
+  color: inherit;
+}
+
 .most-popular .item img {
   border-radius: 23px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top;
 }
 
 .most-popular .item h4 {
@@ -918,6 +927,10 @@ Gaming Library Style
 
 .gaming-library .item ul li img {
   margin-top: -30px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: top left;
 }
 
 .gaming-library .item ul li {
