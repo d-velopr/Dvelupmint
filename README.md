@@ -1,20 +1,11 @@
 # Organized Project Directory
 
-TODO : 
-index.html
-1. Anchor all cards to their corresponding url 
-2. Anchor Visit Site buttons to their correspinding url 
+TODO :
+browse.html 
 
-AE-OC : https://automotiveentertainmentoc.com/
-Never Ending A&R : https://neverending-ar.com/
-LAURA: https://www.laurala.org/
-Clothing Store: https://d-velopr.github.io/Slattson/
-RHAC: https://d-velopr.github.io/RHAC/
-TG6: https://teamglitch6.com/
-TG6-dev: https://tg6-dev.com/
-NVOCC: https://github.com/d-velopr/nvocc 
-
-* NVOCC is a web app i am currently building it is not a live site 
-
-3. Link the real google analytics to the Web App Anlaytics section , let me know how i can give you the data
-
+1. Keep advertising my packages in Featured Games Start section and we will link them to stripe checkout links after
+2. change top-download div to correspond with the data within index.html 
+3. Change Start Stream Start Div to a simple "How To Start Your Website" which displays the 3 simple steps when 
+spending money with me . 1. Get a free qoute 2. Deposit + Data ingestion (for the website) and 3. full payment upon final approval garunteeing client satisfaction
+4. make sure the page is consistent with index.html
+5. leave the bottom Most Popular Live Stream div alone i need to think about what i want to do with it 
