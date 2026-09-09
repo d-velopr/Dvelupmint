@@ -41,13 +41,57 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
-    <!--
 
-TemplateMo 579 Cyborg Gaming
-
-https://templatemo.com/tm-579-cyborg-gaming
-
--->
+    <!-- Scoped styles for the hero traffic chart only. Nothing else on this
+         page needs custom CSS; everything below reuses the site stylesheet. -->
+    <style>
+      .analytics-chart {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .analytics-chart .chart-line {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+      }
+      .analytics-chart .chart-area,
+      .analytics-chart .chart-dots {
+        opacity: 0;
+      }
+      .analytics-chart.is-drawn .chart-line {
+        animation: chart-draw 1.8s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+      }
+      .analytics-chart.is-drawn .chart-area {
+        animation: chart-fade 0.9s ease-out 0.5s forwards;
+      }
+      .analytics-chart.is-drawn .chart-dots {
+        animation: chart-fade 0.6s ease-out 1.2s forwards;
+      }
+      @keyframes chart-draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes chart-fade {
+        to {
+          opacity: 1;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .analytics-chart .chart-line {
+          stroke-dashoffset: 0;
+        }
+        .analytics-chart .chart-area,
+        .analytics-chart .chart-dots {
+          opacity: 1;
+        }
+        .analytics-chart.is-drawn .chart-line,
+        .analytics-chart.is-drawn .chart-area,
+        .analytics-chart.is-drawn .chart-dots {
+          animation: none;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -130,16 +174,146 @@ https://templatemo.com/tm-579-cyborg-gaming
                     </div>
                     <div class="col-lg-8">
                       <div class="thumb">
-                        <img
-                          src="assets/images/feature-right.jpg"
-                          alt=""
+                        <svg
+                          class="analytics-chart"
+                          viewBox="0 0 760 299"
+                          xmlns="http://www.w3.org/2000/svg"
+                          role="img"
+                          aria-label="Illustrative twelve month traffic growth curve"
+                          font-family="Poppins, sans-serif"
                           style="border-radius: 23px"
-                        />
-                        <a
-                          href="https://www.youtube.com/watch?v=r1b03uKWk_M"
-                          target="_blank"
-                          ><i class="fa fa-play"></i
-                        ></a>
+                        >
+                          <title>
+                            Twelve month traffic growth curve, sample shape
+                          </title>
+                          <defs>
+                            <linearGradient
+                              id="chartFill"
+                              x1="0"
+                              y1="0"
+                              x2="0"
+                              y2="1"
+                            >
+                              <stop
+                                offset="0%"
+                                stop-color="#ec6090"
+                                stop-opacity="0.45"
+                              />
+                              <stop
+                                offset="100%"
+                                stop-color="#ec6090"
+                                stop-opacity="0"
+                              />
+                            </linearGradient>
+                          </defs>
+
+                          <rect
+                            x="0"
+                            y="0"
+                            width="760"
+                            height="299"
+                            rx="23"
+                            fill="#27292a"
+                          />
+
+                          <!-- faint grid -->
+                          <g stroke="#34383a" stroke-width="1">
+                            <line x1="48" y1="70" x2="728" y2="70" />
+                            <line x1="48" y1="115" x2="728" y2="115" />
+                            <line x1="48" y1="160" x2="728" y2="160" />
+                            <line x1="48" y1="205" x2="728" y2="205" />
+                          </g>
+                          <line
+                            x1="48"
+                            y1="250"
+                            x2="728"
+                            y2="250"
+                            stroke="#3f4345"
+                            stroke-width="1"
+                          />
+
+                          <text
+                            x="48"
+                            y="44"
+                            fill="#ffffff"
+                            font-size="16"
+                            font-weight="700"
+                            letter-spacing="1.5"
+                          >
+                            MONTHLY TRAFFIC
+                          </text>
+                          <text
+                            x="728"
+                            y="44"
+                            fill="#666666"
+                            font-size="12"
+                            letter-spacing="1"
+                            text-anchor="end"
+                          >
+                            SAMPLE GROWTH CURVE
+                          </text>
+
+                          <path
+                            class="chart-area"
+                            fill="url(#chartFill)"
+                            d="M48,232 L109.8,221.2 L171.6,224.8 L233.5,203.2 L295.3,190.6 L357.1,196 L418.9,170.8 L480.7,156.4 L542.5,138.4 L604.4,145.6 L666.2,113.2 L728,84.4 L728,250 L48,250 Z"
+                          />
+                          <path
+                            class="chart-line"
+                            pathLength="100"
+                            fill="none"
+                            stroke="#ec6090"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M48,232 L109.8,221.2 L171.6,224.8 L233.5,203.2 L295.3,190.6 L357.1,196 L418.9,170.8 L480.7,156.4 L542.5,138.4 L604.4,145.6 L666.2,113.2 L728,84.4"
+                          />
+
+                          <g
+                            class="chart-dots"
+                            fill="#1f2122"
+                            stroke="#ec6090"
+                            stroke-width="2"
+                          >
+                            <circle cx="48" cy="232" r="4" />
+                            <circle cx="109.8" cy="221.2" r="4" />
+                            <circle cx="171.6" cy="224.8" r="4" />
+                            <circle cx="233.5" cy="203.2" r="4" />
+                            <circle cx="295.3" cy="190.6" r="4" />
+                            <circle cx="357.1" cy="196" r="4" />
+                            <circle cx="418.9" cy="170.8" r="4" />
+                            <circle cx="480.7" cy="156.4" r="4" />
+                            <circle cx="542.5" cy="138.4" r="4" />
+                            <circle cx="604.4" cy="145.6" r="4" />
+                            <circle cx="666.2" cy="113.2" r="4" />
+                            <circle
+                              cx="728"
+                              cy="84.4"
+                              r="5.5"
+                              fill="#e75e8d"
+                              stroke="#27292a"
+                            />
+                          </g>
+
+                          <g
+                            fill="#666666"
+                            font-size="13"
+                            text-anchor="middle"
+                          >
+                            <text x="48" y="272">Jan</text>
+                            <text x="109.8" y="272">Feb</text>
+                            <text x="171.6" y="272">Mar</text>
+                            <text x="233.5" y="272">Apr</text>
+                            <text x="295.3" y="272">May</text>
+                            <text x="357.1" y="272">Jun</text>
+                            <text x="418.9" y="272">Jul</text>
+                            <text x="480.7" y="272">Aug</text>
+                            <text x="542.5" y="272">Sep</text>
+                            <text x="604.4" y="272">Oct</text>
+                            <text x="666.2" y="272">Nov</text>
+                            <text x="728" y="272">Dec</text>
+                          </g>
+                        </svg>
                       </div>
                     </div>
                   </div>
@@ -160,64 +334,73 @@ https://templatemo.com/tm-579-cyborg-gaming
                       <div class="col-lg-6">
                         <div class="left-info">
                           <div class="left">
-                            <h4>Fortnite</h4>
-                            <span>Sandbox</span>
+                            <h4>Dvelupmint Portfolio</h4>
+                            <span>8 Projects · 7 Live</span>
                           </div>
                           <ul>
-                            <li><i class="fa fa-star"></i> 4.8</li>
-                            <li><i class="fa fa-download"></i> 2.3M</li>
+                            <!-- derived: mean rating of the seven live projects (26.7 / 7) -->
+                            <li><i class="fa fa-star"></i> 3.8</li>
+                            <!-- derived: sum of the seven live projects' monthly users
+                                 (42.5 + 13.7 + 33.9 + 7.2 + 19.1 + 20.1 + 9.2) -->
+                            <li><i class="fa fa-line-chart"></i> 145.7K</li>
                           </ul>
                         </div>
                       </div>
                       <div class="col-lg-6">
                         <div class="right-info">
                           <ul>
-                            <li><i class="fa fa-star"></i> 4.8</li>
-                            <li><i class="fa fa-download"></i> 2.3M</li>
-                            <li><i class="fa fa-server"></i> 36GB</li>
-                            <li><i class="fa fa-gamepad"></i> Action</li>
+                            <li><i class="fa fa-star"></i> 3.8 Avg Rating</li>
+                            <li>
+                              <i class="fa fa-users"></i> 145.7K/mo
+                            </li>
+                            <li>
+                              <i class="fa fa-rocket"></i> 7 Live Projects
+                            </li>
+                            <!-- derived: earliest known launch is September 2022 -->
+                            <li>
+                              <i class="fa fa-calendar"></i> 4 Yrs Shipping
+                            </li>
                           </ul>
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <img
-                          src="assets/images/details-01.jpg"
-                          alt=""
+                          src="assets/images/AEOC.jpeg"
+                          alt="AE-OC"
                           style="border-radius: 23px; margin-bottom: 30px"
                         />
                       </div>
                       <div class="col-lg-4">
                         <img
-                          src="assets/images/details-02.jpg"
-                          alt=""
+                          src="assets/images/LAURA.jpeg"
+                          alt="L.A.U.R.A"
                           style="border-radius: 23px; margin-bottom: 30px"
                         />
                       </div>
                       <div class="col-lg-4">
                         <img
-                          src="assets/images/details-03.jpg"
-                          alt=""
+                          src="assets/images/NeverEndingAR.jpeg"
+                          alt="Never Ending A&amp;R"
                           style="border-radius: 23px; margin-bottom: 30px"
                         />
                       </div>
                       <div class="col-lg-12">
                         <p>
-                          Cyborg Gaming is free HTML CSS website template
-                          provided by TemplateMo. This is Bootstrap v5.2.0
-                          layout. You can make a
-                          <a href="https://paypal.me/templatemo" target="_blank"
-                            >small contribution via PayPal</a
-                          >
-                          to info [at] templatemo.com and thank you for
-                          supporting. If you want to get the PSD source files,
-                          please contact us. Lorem ipsum dolor sit consectetur
-                          es dispic dipiscingei elit, sed doers eiusmod lisum
-                          hored tempor.
+                          Every figure above comes from a site that is live
+                          right now. Seven builds are in production, carrying
+                          about 145.7K monthly users between them, and the
+                          oldest has run since 2022 without a rebuild. That is
+                          the part worth checking before you hire anyone: not
+                          how a portfolio looks on launch day, but whether it
+                          stays up and keeps pulling traffic two years later.
+                          Your project ships with the same analytics wired in
+                          from the start, so you read your own version of this
+                          page instead of taking our word for it.
                         </p>
                       </div>
                       <div class="col-lg-12">
                         <div class="main-border-button">
-                          <a href="#">Download Fortnite Now!</a>
+                          <a href="browse.html">Get A Free Quote</a>
                         </div>
                       </div>
                     </div>
@@ -227,102 +410,432 @@ https://templatemo.com/tm-579-cyborg-gaming
             </div>
             <!-- ***** Details End ***** -->
 
+            <!-- ***** Per-Project Analytics Start ***** -->
+            <div class="gaming-library">
+              <div class="col-lg-12">
+                <div class="heading-section">
+                  <h4><em>Per-Project</em> Analytics</h4>
+                </div>
+                <div class="item">
+                  <ul>
+                    <li>
+                      <img
+                        src="assets/images/AEOC.jpeg"
+                        alt="AE-OC"
+                        class="templatemo-item"
+                      />
+                    </li>
+                    <li>
+                      <h4>AE-OC</h4>
+                      <span>AutomotiveEntOC.com</span>
+                    </li>
+                    <li>
+                      <h4>Launched</h4>
+                      <span>June 2023</span>
+                    </li>
+                    <li>
+                      <h4>Monthly Users</h4>
+                      <span>42.5K</span>
+                    </li>
+                    <li>
+                      <h4>Status</h4>
+                      <span>Live</span>
+                    </li>
+                    <li>
+                      <div class="main-border-button">
+                        <a
+                          href="https://automotiveentertainmentoc.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Visit Site</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <ul>
+                    <li>
+                      <img
+                        src="assets/images/NeverEndingAR.jpeg"
+                        alt="Never Ending A&amp;R"
+                        class="templatemo-item"
+                      />
+                    </li>
+                    <li>
+                      <h4>NEVER ENDING A&amp;R</h4>
+                      <span>neverendingar.com</span>
+                    </li>
+                    <li>
+                      <h4>Launched</h4>
+                      <!-- TODO: replace TBA with real launch date -->
+                      <span>TBA</span>
+                    </li>
+                    <li>
+                      <h4>Monthly Users</h4>
+                      <span>13.7K</span>
+                    </li>
+                    <li>
+                      <h4>Status</h4>
+                      <span>Live</span>
+                    </li>
+                    <li>
+                      <div class="main-border-button">
+                        <a
+                          href="https://neverending-ar.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Visit Site</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <ul>
+                    <li>
+                      <img
+                        src="assets/images/LAURA.jpeg"
+                        alt="L.A.U.R.A"
+                        class="templatemo-item"
+                      />
+                    </li>
+                    <li>
+                      <h4>L.A.U.R.A</h4>
+                      <span>laurala.org</span>
+                    </li>
+                    <li>
+                      <h4>Launched</h4>
+                      <span>September 2022</span>
+                    </li>
+                    <li>
+                      <h4>Monthly Users</h4>
+                      <span>33.9K</span>
+                    </li>
+                    <li>
+                      <h4>Status</h4>
+                      <span>Live</span>
+                    </li>
+                    <li>
+                      <div class="main-border-button">
+                        <a
+                          href="https://www.laurala.org/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Visit Site</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <ul>
+                    <li>
+                      <img
+                        src="assets/images/OnlineStore.jpeg"
+                        alt="Online Store"
+                        class="templatemo-item"
+                      />
+                    </li>
+                    <li>
+                      <h4>Online Store</h4>
+                      <span>slattson.com</span>
+                    </li>
+                    <li>
+                      <h4>Launched</h4>
+                      <!-- TODO: replace TBA with real launch date -->
+                      <span>TBA</span>
+                    </li>
+                    <li>
+                      <h4>Monthly Users</h4>
+                      <span>7.2K</span>
+                    </li>
+                    <li>
+                      <h4>Status</h4>
+                      <span>Live</span>
+                    </li>
+                    <li>
+                      <div class="main-border-button">
+                        <a
+                          href="https://d-velopr.github.io/Slattson/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Visit Site</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <ul>
+                    <li>
+                      <img
+                        src="assets/images/RHACLA.jpeg"
+                        alt="R.H.A.C."
+                        class="templatemo-item"
+                      />
+                    </li>
+                    <li>
+                      <h4>R.H.A.C.</h4>
+                      <span>rhacla.org</span>
+                    </li>
+                    <li>
+                      <h4>Launched</h4>
+                      <!-- TODO: replace TBA with real launch date -->
+                      <span>TBA</span>
+                    </li>
+                    <li>
+                      <h4>Monthly Users</h4>
+                      <span>19.1K</span>
+                    </li>
+                    <li>
+                      <h4>Status</h4>
+                      <span>Live</span>
+                    </li>
+                    <li>
+                      <div class="main-border-button">
+                        <a
+                          href="https://d-velopr.github.io/RHAC/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Visit Site</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <ul>
+                    <li>
+                      <img
+                        src="assets/images/TG6.jpeg"
+                        alt="TG6"
+                        class="templatemo-item"
+                      />
+                    </li>
+                    <li>
+                      <h4>TG6</h4>
+                      <span>teamglitch6.com</span>
+                    </li>
+                    <li>
+                      <h4>Launched</h4>
+                      <!-- TODO: replace TBA with real launch date -->
+                      <span>TBA</span>
+                    </li>
+                    <li>
+                      <h4>Monthly Users</h4>
+                      <span>20.1K</span>
+                    </li>
+                    <li>
+                      <h4>Status</h4>
+                      <span>Live</span>
+                    </li>
+                    <li>
+                      <div class="main-border-button">
+                        <a
+                          href="https://teamglitch6.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Visit Site</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item">
+                  <ul>
+                    <li>
+                      <img
+                        src="assets/images/TG6-dev.jpeg"
+                        alt="TG6-DEV"
+                        class="templatemo-item"
+                      />
+                    </li>
+                    <li>
+                      <h4>TG6-DEV</h4>
+                      <span>tg6-dev.com</span>
+                    </li>
+                    <li>
+                      <h4>Launched</h4>
+                      <!-- TODO: replace TBA with real launch date -->
+                      <span>TBA</span>
+                    </li>
+                    <li>
+                      <h4>Monthly Users</h4>
+                      <span>9.2K</span>
+                    </li>
+                    <li>
+                      <h4>Status</h4>
+                      <span>Live</span>
+                    </li>
+                    <li>
+                      <div class="main-border-button">
+                        <a
+                          href="https://tg6-dev.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Visit Site</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item last-item">
+                  <ul>
+                    <li>
+                      <img
+                        src="assets/images/NVOCC.png"
+                        alt="NVOCC"
+                        class="templatemo-item"
+                      />
+                    </li>
+                    <li>
+                      <h4>NVOCC</h4>
+                      <span>meridiannvocc.app</span>
+                    </li>
+                    <li>
+                      <h4>Launched</h4>
+                      <!-- TODO: replace TBA with real launch date -->
+                      <span>TBA</span>
+                    </li>
+                    <li>
+                      <h4>Monthly Users</h4>
+                      <!-- TODO: replace N/A with real figure -->
+                      <span>N/A</span>
+                    </li>
+                    <li>
+                      <h4>Status</h4>
+                      <span>In Development</span>
+                    </li>
+                    <li>
+                      <div class="main-border-button">
+                        <a
+                          href="https://github.com/d-velopr/nvocc"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >View Repo</a
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- ***** Per-Project Analytics End ***** -->
+
             <!-- ***** Other Start ***** -->
             <div class="other-games">
               <div class="row">
                 <div class="col-lg-12">
                   <div class="heading-section">
-                    <h4><em>Other Related</em> Games</h4>
+                    <h4><em>Other</em> Projects</h4>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="item">
-                    <img
-                      src="assets/images/game-01.jpg"
-                      alt=""
-                      class="templatemo-item"
-                    />
-                    <h4>Dota 2</h4>
-                    <span>Sandbox</span>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
+                    <a
+                      class="card-link"
+                      href="https://d-velopr.github.io/Slattson/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="assets/images/OnlineStore.jpeg"
+                        alt="Online Store"
+                        class="templatemo-item"
+                      />
+                      <h4>Online Store<br /><span>slattson.com</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 3.0</li>
+                        <li><i class="fa fa-line-chart"></i> 7.2K</li>
+                      </ul>
+                    </a>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="item">
-                    <img
-                      src="assets/images/game-02.jpg"
-                      alt=""
-                      class="templatemo-item"
-                    />
-                    <h4>Dota 2</h4>
-                    <span>Sandbox</span>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
+                    <a
+                      class="card-link"
+                      href="https://d-velopr.github.io/RHAC/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="assets/images/RHACLA.jpeg"
+                        alt="R.H.A.C."
+                        class="templatemo-item"
+                      />
+                      <h4>R.H.A.C.<br /><span>rhacla.org</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 3.8</li>
+                        <li><i class="fa fa-line-chart"></i> 19.1K</li>
+                      </ul>
+                    </a>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="item">
-                    <img
-                      src="assets/images/game-03.jpg"
-                      alt=""
-                      class="templatemo-item"
-                    />
-                    <h4>Dota 2</h4>
-                    <span>Sandbox</span>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
+                    <a
+                      class="card-link"
+                      href="https://teamglitch6.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="assets/images/TG6.jpeg"
+                        alt="TG6"
+                        class="templatemo-item"
+                      />
+                      <h4>TG6<br /><span>teamglitch6.com</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.5</li>
+                        <li><i class="fa fa-line-chart"></i> 20.1K</li>
+                      </ul>
+                    </a>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="item">
-                    <img
-                      src="assets/images/game-02.jpg"
-                      alt=""
-                      class="templatemo-item"
-                    />
-                    <h4>Dota 2</h4>
-                    <span>Sandbox</span>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
+                    <a
+                      class="card-link"
+                      href="https://tg6-dev.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="assets/images/TG6-dev.jpeg"
+                        alt="TG6-DEV"
+                        class="templatemo-item"
+                      />
+                      <h4>TG6-DEV<br /><span>tg6-dev.com</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 2.6</li>
+                        <li><i class="fa fa-line-chart"></i> 9.2K</li>
+                      </ul>
+                    </a>
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="item">
-                    <img
-                      src="assets/images/game-03.jpg"
-                      alt=""
-                      class="templatemo-item"
-                    />
-                    <h4>Dota 2</h4>
-                    <span>Sandbox</span>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="item">
-                    <img
-                      src="assets/images/game-01.jpg"
-                      alt=""
-                      class="templatemo-item"
-                    />
-                    <h4>Dota 2</h4>
-                    <span>Sandbox</span>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
+                    <a
+                      class="card-link"
+                      href="https://github.com/d-velopr/nvocc"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="assets/images/NVOCC.png"
+                        alt="NVOCC"
+                        class="templatemo-item"
+                      />
+                      <h4>NVOCC<br /><span>meridiannvocc.app</span></h4>
+                      <ul>
+                        <!-- TODO: replace TBD with real figure -->
+                        <li><i class="fa fa-star"></i> TBD</li>
+                        <!-- TODO: replace N/A with real figure -->
+                        <li><i class="fa fa-line-chart"></i> N/A</li>
+                      </ul>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -338,16 +851,7 @@ https://templatemo.com/tm-579-cyborg-gaming
         <div class="row">
           <div class="col-lg-12">
             <p>
-              Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights
-              reserved.
-
-              <br />Design:
-              <a
-                href="https://templatemo.com"
-                target="_blank"
-                title="free CSS templates"
-                >TemplateMo</a
-              >
+              Copyright © 2032 <a href="#">Dvelupmint</a> . All rights reserved.
             </p>
           </div>
         </div>
@@ -364,5 +868,29 @@ https://templatemo.com/tm-579-cyborg-gaming
     <script src="assets/js/tabs.js"></script>
     <script src="assets/js/popup.js"></script>
     <script src="assets/js/custom.js"></script>
+
+    <!-- Draw the hero traffic chart when it scrolls into view. -->
+    <script>
+      (function () {
+        var chart = document.querySelector(".analytics-chart");
+        if (!chart) return;
+        if (!("IntersectionObserver" in window)) {
+          chart.classList.add("is-drawn");
+          return;
+        }
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-drawn");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.25 }
+        );
+        observer.observe(chart);
+      })();
+    </script>
   </body>
 </html>
