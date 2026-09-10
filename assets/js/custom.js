@@ -28,7 +28,7 @@
 	  var hero = $('.header-text');
 	  var header = $('header').height();
 	  // Pages with a hero dock the bar once that hero has scrolled past.
-	  // links.html has no .header-text, and hero.height() there is undefined —
+	  // contact.html has no .header-text, and hero.height() there is undefined —
 	  // every comparison against NaN is false, so the bar never docked and the
 	  // header scrolled away for good. With no hero, dock once the header clears.
 	  var threshold = hero.length ? hero.height() - header : header;

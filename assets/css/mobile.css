@@ -1,0 +1,235 @@
+/*
+ * Phone and tablet layer, loaded on every page after the template and
+ * site-search stylesheets. One rule, the card fix below, applies at every
+ * width because the same bug shows on desktop. assets/css/templatemo-cyborg-gaming.css is not
+ * edited; each rule here overrides one of its breakpoints.
+ *
+ * The header rules use the template's own 992px breakpoint, since that is
+ * where its collapsed menu takes over. Everything else starts at 767px.
+ * Colours come from the template: #1f2122 panel, #27292a tile, #353637
+ * hairline, #ec6090 accent.
+ */
+
+/* Home "Most Popular" cards, at every width. The rating list floats right
+   of the name; when a long domain pushes it onto its own line, nothing
+   contained the float and it hung out of the bottom of the card. That
+   happens on phones, tablets, and 1024-1280px desktops alike. */
+.most-popular .card-link {
+  display: flow-root;
+}
+
+/* ---------------------------------------------------------------------
+   Header and menu, 992px and below
+   --------------------------------------------------------------------- */
+
+@media (max-width: 992px) {
+  /* The template paints the collapsed header and its menu white (#f7f7f7,
+     then #fff once it docks). On this site that reads as a hole punched in
+     a dark page. */
+  .header-area {
+    background-color: #1f2122 !important;
+    border-bottom: 1px solid #27292a;
+    box-shadow: none !important;
+  }
+
+  .header-area .main-nav .nav li,
+  .header-area .main-nav .nav li:first-child {
+    background: #1f2122;
+    border-color: #27292a;
+  }
+
+  .header-area .main-nav .nav li a {
+    background: #1f2122 !important;
+    color: #ccc !important;
+  }
+
+  .header-area .main-nav .nav li a:hover,
+  .header-area .main-nav .nav li a.active {
+    color: #ec6090 !important;
+  }
+
+  /* Search. The template hides #search below 992px, so on a phone the
+     site had no search at all. It comes back as the first row of the open
+     menu. :has() lets the open state live on the existing .menu-trigger;
+     a browser without :has() keeps the old behaviour. */
+  .header-area .main-nav {
+    flex-wrap: wrap;
+  }
+
+  .header-area .main-nav .search-input {
+    display: none;
+    flex-basis: 100%;
+    padding: 12px 15px;
+    background-color: #1f2122;
+    border-top: 1px solid #27292a;
+  }
+
+  .header-area .main-nav:has(.menu-trigger.active) .search-input {
+    display: block;
+    margin-top: 65px;
+  }
+
+  .background-header .main-nav:has(.menu-trigger.active) .search-input {
+    margin-top: 70px;
+  }
+
+  .header-area .main-nav:has(.menu-trigger.active) #search {
+    display: block;
+  }
+
+  .header-area .main-nav #search input {
+    width: 100%;
+    font-size: 16px; /* under 16px, iOS Safari zooms the page on focus */
+  }
+
+  /* The menu rows now sit under the search row, not under the bar. */
+  .header-area.header-sticky .main-nav:has(.menu-trigger.active) .nav {
+    margin-top: 0 !important;
+  }
+
+  /* An absolutely placed panel would be clipped by .main-nav, which the
+     template sets to overflow: hidden here. In the flow, the results push
+     the menu rows down instead. */
+  .header-area .main-nav #search .site-search-results {
+    position: static;
+    min-width: 0;
+    margin-top: 10px;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Page content, 767px and below
+   --------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  /* The outer card and every panel inside it each had a 30px inset, which
+     left a 390px screen about 250px of content. */
+  body .page-content {
+    margin-top: 100px;
+    padding: 12px;
+  }
+
+  .most-popular,
+  .gaming-library,
+  .featured-games,
+  .top-downloaded,
+  .top-streamers,
+  .live-stream,
+  .game-details .content {
+    padding: 24px 20px;
+  }
+
+  .most-popular,
+  .gaming-library,
+  .live-stream {
+    margin-top: 40px;
+  }
+
+  .start-stream .item,
+  .game-details .content .left-info,
+  .game-details .content .right-info {
+    padding: 24px 20px;
+  }
+
+  /* The "What You Get", "Featured Packages" and "Top Projects" panels
+     keep their 567px desktop height on a phone, leaving a gap under short
+     content. */
+  .featured-games,
+  .top-downloaded {
+    min-height: 0;
+    max-height: none;
+  }
+
+  /* Home hero: "APPLICATIONS" is wider than the banner at 35px. */
+  .main-banner {
+    min-height: 0;
+    padding: 48px 22px;
+  }
+
+  .main-banner h4 {
+    font-size: 27px;
+    line-height: 1.25;
+  }
+
+  .most-popular .item h4 span {
+    overflow-wrap: anywhere;
+  }
+
+  /* Home "Web App Analytics" and the Analytics page rows. The template's
+     767px rule asks for one column, but its 992px rule comes later in the
+     file with the same !important and wins, so phones got two 48% columns
+     and the domain ran into the launch date. Here each row is:
+       [thumb] name / domain
+       Launched      Monthly users
+       Status
+       [ Visit Site ] */
+  .gaming-library .item ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 16px;
+  }
+
+  .gaming-library .item ul li,
+  .gaming-library .item ul li:first-child,
+  .gaming-library .item ul li:last-child {
+    width: 50% !important;
+    margin-top: 0 !important;
+    text-align: left !important;
+  }
+
+  .gaming-library .item ul li:first-child {
+    width: 76px !important;
+  }
+
+  .gaming-library .item ul li:nth-child(2) {
+    width: calc(100% - 76px) !important;
+  }
+
+  .gaming-library .item ul li:last-child {
+    width: 100% !important;
+  }
+
+  .gaming-library .item ul li img {
+    margin-top: 0;
+    width: 60px;
+    height: 60px;
+  }
+
+  .gaming-library .item ul li span {
+    overflow-wrap: anywhere;
+  }
+
+  .gaming-library .item .main-border-button a {
+    display: block;
+    text-align: center;
+  }
+
+  /* The template pulls the bottom button half out of its panel; on a
+     phone that collides with the next panel's top edge. */
+  .most-popular .main-button,
+  .gaming-library .main-button {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  /* Analytics page summary. */
+  .game-details h2 {
+    font-size: 30px;
+    margin: 36px 0;
+  }
+
+  .game-details .content .left-info {
+    display: flow-root;
+  }
+
+  .game-details .content .right-info ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 12px;
+  }
+
+  .game-details .content .right-info ul li {
+    width: auto;
+  }
+}

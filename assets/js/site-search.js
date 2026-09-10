@@ -31,12 +31,12 @@
     // ----- Pages -----
     { title: "Home", subtitle: "Dvelupmint portfolio", url: "index.html", kind: "page", keywords: "index start homepage portfolio work", external: false },
     { title: "Browse", subtitle: "Packages and top projects", url: "browse.html", kind: "page", keywords: "packages pricing quote projects portfolio catalog", external: false },
-    { title: "Details", subtitle: "Per-project analytics", url: "details.html", kind: "page", keywords: "analytics stats metrics traffic users launched status", external: false },
-    { title: "Library", subtitle: "What you get, and live client sites", url: "streams.html", kind: "page", keywords: "included services outcomes live client sites streams what you get", external: false },
-    { title: "Contact", subtitle: "Request a free quote", url: "links.html", kind: "page", keywords: "quote contact form email hire get in touch social links", external: false }
+    { title: "Analytics", subtitle: "Per-project analytics", url: "analytics.html", kind: "page", keywords: "analytics stats metrics traffic users launched status", external: false },
+    { title: "Details", subtitle: "What you get, and live client sites", url: "details.html", kind: "page", keywords: "included services outcomes live client sites details what you get", external: false },
+    { title: "Contact", subtitle: "Request a free quote", url: "contact.html", kind: "page", keywords: "quote contact form email hire get in touch social links", external: false }
   ];
 
-  var NO_MATCH = { title: "No matches — get a free quote →", subtitle: "", url: "links.html#quote", kind: "quote", keywords: "", external: false };
+  var NO_MATCH = { title: "No matches — get a free quote →", subtitle: "", url: "contact.html#quote", kind: "quote", keywords: "", external: false };
 
   // A match at the start of the field, or at the start of a word inside it,
   // outranks a match buried mid-word.

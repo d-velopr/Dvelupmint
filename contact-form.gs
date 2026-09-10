@@ -1,7 +1,7 @@
 /**
  * Dvelupmint — contact / quote-request backend
  * =============================================================================
- * Receives the form on links.html and appends one timestamped row per request
+ * Receives the form on contact.html and appends one timestamped row per request
  * to a Google Sheet.
  *
  * DEPLOY (once, ~3 minutes)
@@ -20,9 +20,9 @@
  *     is unverified — that is expected for your own script; continue.
  *  5. Copy the Web app URL it gives you. It ends in /exec, like:
  *       https://script.google.com/macros/s/AKfycbx..................vQ/exec
- *  6. Open links.html and replace REPLACE_ME_APPS_SCRIPT_URL with that URL,
+ *  6. Open contact.html and replace REPLACE_ME_APPS_SCRIPT_URL with that URL,
  *     keeping the quotes. That is the only edit — one line.
- *  7. Load links.html, submit a test request, confirm the row lands in the Sheet.
+ *  7. Load contact.html, submit a test request, confirm the row lands in the Sheet.
  *
  * AFTER ANY EDIT to this script: Deploy > Manage deployments > edit (pencil) >
  * Version: New version > Deploy. Editing without redeploying changes nothing —
@@ -30,7 +30,7 @@
  *
  * NOTE ON THE PAGE'S FETCH
  * -----------------------------------------------------------------------------
- * links.html posts with mode:"no-cors" and a text/plain body, because an Apps
+ * contact.html posts with mode:"no-cors" and a text/plain body, because an Apps
  * Script web app cannot answer a CORS preflight. The body therefore arrives as
  * a JSON string in e.postData.contents (doPost below also accepts ordinary form
  * parameters, so a plain HTML form post still works). The browser cannot read
@@ -57,7 +57,7 @@ var HEADERS = [
 ];
 
 /**
- * Handles the form post from links.html.
+ * Handles the form post from contact.html.
  */
 function doPost(e) {
   try {
@@ -95,14 +95,14 @@ function doPost(e) {
 /**
  * Health check. Opening the /exec URL in a browser should show {"status":"ok"} —
  * that is the fastest way to confirm the deployment is live and public before
- * pasting the URL into links.html.
+ * pasting the URL into contact.html.
  */
 function doGet() {
   return jsonResponse_({ status: 'ok', service: 'Dvelupmint contact form' });
 }
 
 /**
- * Accepts either a JSON body (what links.html sends) or ordinary form
+ * Accepts either a JSON body (what contact.html sends) or ordinary form
  * parameters, so the endpoint keeps working if the page ever switches to a
  * plain form post.
  */
