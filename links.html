@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Dvelupmint | Socials</title>
     <meta charset="utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Dvelupmint | Contact</title>
 
     <!-- Google tag (gtag.js) -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-QZJGVHBEQD"
+      src="https://www.googletagmanager.com/gtag/js?id=G-B3N103RWGM"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -18,93 +26,1063 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-QZJGVHBEQD");
+      gtag("config", "G-B3N103RWGM");
     </script>
 
-    <script src="js/skel.min.js"></script>
-    <script src="js/init.js"></script>
-    <noscript>
-      <link rel="stylesheet" href="css/skel.css" />
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="stylesheet" href="css/style-wide.css" />
-      <link rel="stylesheet" href="css/style-noscript.css" />
-    </noscript>
-    <link
-      rel="shortcut icon"
-      href="assets/images/fav/favicon(3).ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="assets/images/fav/favicon(3).ico"
-      type="image/x-icon"
-    />
-  </head>
-  <body class="loading">
-    <div id="wrapper">
-      <div id="bg"></div>
-      <div id="overlay"></div>
-      <div id="main">
-        <!-- Header -->
-        <header id="header">
-          <a href="https://dvelupr.com/" target="Dvelupr.com">
-            <img src="css/images/logo2.png" alt="White Logo" width="300" />
-          </a>
-          <p>
-            &nbsp;&bull;&nbsp; Deploying Custom Websites To Generate Leads
-            &nbsp;&bull;&nbsp;
-          </p>
-          <nav>
-            <ul>
-              <!--
-              <li>
-                <a href="index.html" class="fa fa-home"><span>Home</span></a>
-              </li>
-            -->
-              <li>
-                <a
-                  href="https://www.instagram.com/dvelupmint/"
-                  class="fa fa-instagram"
-                  target="_blank"
-                  ><span>Instagram</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.x.com/dvelupmint"
-                  class="fa fa-twitter"
-                  target="_blank"
-                  ><span>X</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/dvelupmint"
-                  class="fa fa-facebook"
-                  target="_blank"
-                  ><span>Facebook</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/d-velopr"
-                  class="fa fa-github"
-                  target="_blank"
-                  ><span>Github</span></a
-                >
-              </li>
-              <li>
-                <a href="mailto:dvelupr@proton.me" class="fa fa-envelope-o"
-                  ><span>Email</span></a
-                >
-              </li>
-            </ul>
-          </nav>
-        </header>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-        <!-- Footer -->
-        <footer id="footer"></footer>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <style>
+      /* Scoped to this page. The shared stylesheet is not modified. */
+
+      /* The template styles exactly one input on the whole site — the header
+         search box — so every control below has to be built here. Surfaces
+         reuse the template's own values (#1f2122 panel, #27292a control,
+         #353637 hairline, #ec6090 accent) so the form reads as part of the
+         site instead of a browser default dropped onto it. */
+      .contact-form {
+        border-radius: 23px;
+        background-color: #1f2122;
+        padding: 30px;
+      }
+      .contact-form .heading-section h4 {
+        margin-bottom: 10px;
+      }
+      /* One line of orientation above the fields. The template's global <p>
+         colour is #666, which is too dim to read as an instruction. */
+      .contact-form .form-intro {
+        color: #999;
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 30px;
+      }
+
+      .contact-form .field {
+        margin-bottom: 22px;
+      }
+      .contact-form label {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: #fff;
+        letter-spacing: 0.3px;
+        margin-bottom: 8px;
+      }
+      /* "optional" has to be visibly quieter than the label it qualifies,
+         or people read it as part of the field name. */
+      .contact-form label .optional {
+        color: #666;
+        font-weight: 400;
+      }
+
+      .contact-form input,
+      .contact-form select,
+      .contact-form textarea {
+        width: 100%;
+        padding: 14px 18px;
+        background-color: #27292a;
+        border: 1px solid #353637;
+        /* 15px, not the template's 23px pill: at full column width a pill
+           radius reads as a button, and the visitor has to guess which
+           elements they can type into. */
+        border-radius: 15px;
+        color: #fff;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+      .contact-form input::placeholder,
+      .contact-form textarea::placeholder {
+        color: #666;
+      }
+      .contact-form input:focus,
+      .contact-form select:focus,
+      .contact-form textarea:focus {
+        /* The default focus ring is a light halo that disappears against the
+           dark panel, so the accent colour carries focus instead — removing
+           the outline without replacing it would strand keyboard users. */
+        outline: none;
+        border-color: #ec6090;
+        box-shadow: 0 0 0 3px rgba(236, 96, 144, 0.15);
+      }
+      .contact-form textarea {
+        min-height: 160px;
+        /* Horizontal resize would let the visitor drag the textarea wider
+           than the panel and push the page sideways. */
+        resize: vertical;
+      }
+
+      /* A native select paints its arrow in the OS colour, which is near
+         black on this panel, so the control looks like it has nothing to
+         open. Suppress it and draw the chevron in the accent colour. */
+      .contact-form select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding-right: 44px;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ec6090' d='M6 8 0 0h12z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 18px center;
+      }
+      /* The open dropdown list is painted by the browser, not the page.
+         Chromium and Firefox on Linux default it to white-on-white here
+         unless the option itself carries the colours. */
+      .contact-form select option {
+        background-color: #27292a;
+        color: #fff;
+      }
+
+      /* Field-level errors. Colour alone never carries the failure — the
+         message says what to fix, and aria-invalid marks the control. */
+      .contact-form .field.has-error input,
+      .contact-form .field.has-error select,
+      .contact-form .field.has-error textarea {
+        border-color: #e75e8d;
+      }
+      .contact-form .field-error {
+        display: none;
+        font-size: 12px;
+        line-height: 20px;
+        /* Lightened off the #e75e8d accent: 12px copy in the accent itself
+           does not carry enough contrast against #1f2122 to be read. */
+        color: #ff9dbd;
+        margin-top: 8px;
+      }
+      .contact-form .field.has-error .field-error {
+        display: block;
+      }
+
+      /* Bots fill every field they can find in the DOM. This one is pulled
+         out of both the visual and the accessibility tree, so a human never
+         reaches it and anything that submits it is discarded. */
+      .contact-form .hp-field {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
+      /* Submission outcome. Three states, each with its own icon and wording
+         so the outcome survives without colour vision. */
+      .form-status {
+        display: none;
+        border-radius: 15px;
+        padding: 20px 24px;
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 26px;
+      }
+      .form-status.is-visible {
+        display: block;
+      }
+      .form-status p {
+        color: inherit;
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 0px;
+      }
+      .form-status i {
+        margin-right: 8px;
+      }
+      .form-status a {
+        color: inherit;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+      .form-status--success {
+        background-color: rgba(48, 209, 88, 0.1);
+        border: 1px solid #30d158;
+        color: #7ee2a0;
+      }
+      .form-status--error {
+        background-color: rgba(231, 94, 141, 0.1);
+        border: 1px solid #e75e8d;
+        color: #ff9dbd;
+      }
+      /* Used only while the endpoint is still the placeholder. Deliberately
+         not the error colours — nothing has failed, the visitor is simply
+         being routed to email instead. */
+      .form-status--notice {
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid #444;
+        color: #ccc;
+      }
+
+      /* .main-button in the shared stylesheet only ever targets an <a>. A
+         form needs a real <button type="submit"> for Enter-to-submit and for
+         the disabled state, so the same pill is restated for the button. */
+      .contact-form .main-button button {
+        font-size: 14px;
+        color: #fff;
+        background-color: #e75e8d;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 25px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        text-transform: capitalize;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .contact-form .main-button button:hover:not(:disabled) {
+        background-color: #fff;
+        color: #e75e8d;
+      }
+      .contact-form .main-button button:disabled {
+        opacity: 0.6;
+        cursor: default;
+      }
+      .contact-form .form-footnote {
+        display: inline-block;
+        color: #666;
+        font-size: 12px;
+        line-height: 20px;
+        margin-left: 20px;
+      }
+
+      /* Sidebar. Each row is one link rather than the template's separate
+         avatar and text, so the whole strip is a target on touch. */
+      .social-links ul li a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .social-badge {
+        flex: 0 0 46px;
+        width: 46px;
+        height: 46px;
+        line-height: 44px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #27292a;
+        border: 1px solid #353637;
+        margin-right: 15px;
+        transition: background-color 0.3s, border-color 0.3s;
+      }
+      .social-badge i {
+        font-size: 18px;
+        color: #ec6090;
+        transition: color 0.3s;
+      }
+      .social-links ul li a:hover .social-badge {
+        background-color: #ec6090;
+        border-color: #ec6090;
+      }
+      .social-links ul li a:hover .social-badge i {
+        color: #fff;
+      }
+      /* The template sets these list rows to display:inline and paints the
+         label in the accent; here the accent belongs to the badge, so the
+         name is white and the handle underneath is the quiet one. */
+      .social-links ul li h6 {
+        display: block;
+        color: #fff;
+        margin-bottom: 0px;
+      }
+      /* .top-streamers ul li span is floated left as a rank number. This
+         panel has no rank numbers, so the handle has to opt out of that
+         rule rather than inherit a float it never wanted. */
+      .social-links ul li span.handle {
+        float: none;
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        color: #666;
+        padding-top: 2px;
+        margin-right: 0px;
+      }
+      /* Five rows plus the heading run past the 567px the shared stylesheet
+         pins this panel to, which would clip the last link. */
+      .social-links {
+        max-height: none;
+      }
+
+      /* Steps row. The template's .start-stream items expect a photograph in
+         the icon slot; these three steps have no photograph, so the same
+         round badge stands in. */
+      .step-icon {
+        width: 60px;
+        height: 60px;
+        line-height: 58px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #27292a;
+        border: 1px solid #353637;
+      }
+      .step-icon i {
+        font-size: 22px;
+        color: #ec6090;
+      }
+
+      @media (max-width: 767px) {
+        /* iOS Safari zooms the viewport whenever a focused control is under
+           16px, and the zoomed page then scrolls sideways. 16px on the
+           controls is what keeps a 375px screen from scrolling horizontally
+           the moment someone taps a field. */
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+          font-size: 16px;
+        }
+        /* At 375px a 30px panel inset either side leaves the fields too
+           narrow to read the placeholder text in. */
+        .contact-form,
+        .top-streamers {
+          padding: 25px 20px;
+        }
+        .contact-form .main-button button {
+          width: 100%;
+        }
+        .contact-form .form-footnote {
+          display: block;
+          margin-left: 0px;
+          margin-top: 15px;
+          text-align: center;
+        }
+        /* The columns stack at this width and the template gives the items
+           no vertical gap of their own. */
+        .contact-form,
+        .steps-row .item {
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="main-nav">
+              <!-- ***** Logo Start ***** -->
+              <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="" />
+              </a>
+              <!-- ***** Logo End ***** -->
+              <!-- ***** Search End ***** -->
+              <div class="search-input">
+                <form id="search" action="#">
+                  <input
+                    type="text"
+                    placeholder="Type Something"
+                    id="searchText"
+                    name="searchKeyword"
+                    onkeypress="handle"
+                  />
+                  <i class="fa fa-search"></i>
+                </form>
+              </div>
+              <!-- ***** Search End ***** -->
+              <!-- ***** Menu Start ***** -->
+              <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="details.html">Details</a></li>
+                <li><a href="streams.html">Library</a></li>
+                <li>
+                  <a href="links.html" class="active"
+                    >Contact <img src="assets/images/smLogo2.png" alt=""
+                  /></a>
+                </li>
+              </ul>
+              <a class="menu-trigger">
+                <span>Menu</span>
+              </a>
+              <!-- ***** Menu End ***** -->
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-content">
+            <!-- ***** Quote Request Start ***** -->
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="contact-form">
+                  <div class="heading-section">
+                    <h4><em>Request</em> A Quote</h4>
+                  </div>
+                  <p class="form-intro">
+                    Tell me what you need built. I price the whole job up front
+                    — fixed, no obligation — and reply within one business day.
+                  </p>
+
+                  <!-- Submission outcome. Both regions are announced, so a
+                       screen reader hears the result without hunting for it:
+                       success is polite, failure interrupts. -->
+                  <div
+                    class="form-status form-status--success"
+                    id="formSuccess"
+                    role="status"
+                    aria-live="polite"
+                  >
+                    <p>
+                      <i class="fa fa-circle-check" aria-hidden="true"></i>
+                      <span id="successText"></span>
+                    </p>
+                  </div>
+                  <div
+                    class="form-status"
+                    id="formError"
+                    role="alert"
+                    aria-live="assertive"
+                  >
+                    <p>
+                      <i
+                        class="fa fa-triangle-exclamation"
+                        id="errorIcon"
+                        aria-hidden="true"
+                      ></i>
+                      <span id="errorText"></span>
+                    </p>
+                  </div>
+
+                  <form id="quoteForm" novalidate>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="field" data-field="name">
+                          <label for="name">Your Name</label>
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            autocomplete="name"
+                            placeholder="Jane Rivera"
+                            aria-describedby="nameError"
+                          />
+                          <span class="field-error" id="nameError"></span>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="field" data-field="email">
+                          <label for="email">Email</label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            placeholder="you@company.com"
+                            aria-describedby="emailError"
+                          />
+                          <span class="field-error" id="emailError"></span>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="field" data-field="projectType">
+                          <label for="projectType">Project Type</label>
+                          <!-- Options are the packages priced on browse.html,
+                               so a quote request maps to something that
+                               actually exists on the site. -->
+                          <select
+                            id="projectType"
+                            name="projectType"
+                            aria-describedby="projectTypeError"
+                          >
+                            <option value="">Choose a package</option>
+                            <option value="Landing Page">
+                              Landing Page — $300
+                            </option>
+                            <option value="Basic (3-6 pages)">
+                              Basic Site (3–6 pages) — $1,000–$1,500
+                            </option>
+                            <option value="Business (6-9 pages)">
+                              Business Site (6–9 pages) — $2,000–$3,000
+                            </option>
+                            <option value="Enterprise (9+ pages)">
+                              Enterprise Site (9+ pages) — $3,000–$5,000
+                            </option>
+                            <option value="Online E-Commerce Store">
+                              Online E-Commerce Store — $2,500–$5,000
+                            </option>
+                            <option value="Web Application">
+                              Web Application — $5,000–$10,000
+                            </option>
+                            <option value="Not sure yet">
+                              Not sure yet — help me pick
+                            </option>
+                          </select>
+                          <span
+                            class="field-error"
+                            id="projectTypeError"
+                          ></span>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="field" data-field="budget">
+                          <label for="budget"
+                            >Budget <span class="optional">(optional)</span>
+                          </label>
+                          <select id="budget" name="budget">
+                            <option value="">Prefer not to say</option>
+                            <option value="Under $1,000">Under $1,000</option>
+                            <option value="$1,000 - $2,000">
+                              $1,000 – $2,000
+                            </option>
+                            <option value="$2,000 - $3,000">
+                              $2,000 – $3,000
+                            </option>
+                            <option value="$3,000 - $5,000">
+                              $3,000 – $5,000
+                            </option>
+                            <option value="$5,000 - $10,000">
+                              $5,000 – $10,000
+                            </option>
+                            <option value="$10,000+">$10,000+</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="field" data-field="message">
+                          <label for="message">What Are You Building?</label>
+                          <textarea
+                            id="message"
+                            name="message"
+                            placeholder="A few lines is plenty — what the site is for, roughly how many pages, and when you need it."
+                            aria-describedby="messageError"
+                          ></textarea>
+                          <span class="field-error" id="messageError"></span>
+                        </div>
+                      </div>
+
+                      <!-- Honeypot. Never shown, never focusable. -->
+                      <div class="hp-field" aria-hidden="true">
+                        <label for="company">Company</label>
+                        <input
+                          type="text"
+                          id="company"
+                          name="company"
+                          tabindex="-1"
+                          autocomplete="off"
+                        />
+                      </div>
+
+                      <div class="col-lg-12">
+                        <div class="main-button">
+                          <button type="submit" id="submitButton">
+                            Send Request
+                          </button>
+                          <span class="form-footnote"
+                            >No spam, no list. Your details are only used to
+                            quote this job.</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- ***** Social Links Start ***** -->
+              <div class="col-lg-4">
+                <div class="top-streamers social-links">
+                  <div class="heading-section">
+                    <h4><em>Find Me</em> Elsewhere</h4>
+                  </div>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/dvelupmint/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div class="social-badge">
+                          <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </div>
+                        <h6>
+                          Instagram
+                          <span class="handle">@dvelupmint</span>
+                        </h6>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.x.com/dvelupmint"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div class="social-badge">
+                          <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </div>
+                        <h6>
+                          X
+                          <span class="handle">@dvelupmint</span>
+                        </h6>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/dvelupmint"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div class="social-badge">
+                          <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </div>
+                        <h6>
+                          Facebook
+                          <span class="handle">/dvelupmint</span>
+                        </h6>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/d-velopr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div class="social-badge">
+                          <i class="fab fa-github" aria-hidden="true"></i>
+                        </div>
+                        <h6>
+                          Github
+                          <span class="handle">d-velopr</span>
+                        </h6>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:dvelupr@proton.me">
+                        <div class="social-badge">
+                          <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <h6>
+                          Email
+                          <span class="handle">dvelupr@proton.me</span>
+                        </h6>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- ***** Social Links End ***** -->
+            </div>
+            <!-- ***** Quote Request End ***** -->
+
+            <!-- ***** What Happens Next Start ***** -->
+            <div class="start-stream steps-row">
+              <div class="col-lg-12">
+                <div class="heading-section">
+                  <h4><em>What Happens</em> Next</h4>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="item">
+                      <div class="step-icon">
+                        <i class="fa fa-reply" aria-hidden="true"></i>
+                      </div>
+                      <h4>1. A Reply, Not A Bot</h4>
+                      <p>
+                        I read every request myself and answer within one
+                        business day.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="item">
+                      <div class="step-icon">
+                        <i class="fa fa-file-invoice" aria-hidden="true"></i>
+                      </div>
+                      <h4>2. A Fixed Price</h4>
+                      <p>
+                        You get the whole number up front. No hourly billing,
+                        no surprises later.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="item">
+                      <div class="step-icon">
+                        <i class="fa fa-rocket" aria-hidden="true"></i>
+                      </div>
+                      <h4>3. Deposit Starts It</h4>
+                      <p>
+                        Approve the quote, place the deposit, and the build
+                        begins that week.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="main-button">
+                      <a href="browse.html">See The Packages</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ***** What Happens Next End ***** -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p>
+              Copyright © 2032 <a href="#">Dvelupmint</a> . All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+      /* =====================================================================
+         CONTACT_ENDPOINT — the one line to change when the backend goes live.
+         ---------------------------------------------------------------------
+         Deploy contact-form.gs (repo root) as a Google Apps Script web app,
+         then paste the /exec URL it hands you over the placeholder below,
+         keeping the quotes. It looks like:
+
+           https://script.google.com/macros/s/AKfycbx.....................vQ/exec
+
+         Nothing else on this page needs to be touched. Until the real URL is
+         in place the form still validates and still reaches the founder — it
+         routes the visitor to email instead of posting.
+         ===================================================================== */
+      const CONTACT_ENDPOINT = "REPLACE_ME_APPS_SCRIPT_URL";
+
+      const CONTACT_FALLBACK_EMAIL = "dvelupr@proton.me";
+
+      (function () {
+        "use strict";
+
+        /* Guards the placeholder AND a half-pasted URL: only a real deployed
+           /exec URL counts as live. */
+        var ENDPOINT_READY =
+          /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(
+            CONTACT_ENDPOINT
+          );
+
+        var form = document.getElementById("quoteForm");
+        if (!form) return;
+
+        var successBox = document.getElementById("formSuccess");
+        var successText = document.getElementById("successText");
+        var errorBox = document.getElementById("formError");
+        var errorText = document.getElementById("errorText");
+        var errorIcon = document.getElementById("errorIcon");
+        var submitButton = document.getElementById("submitButton");
+        var honeypot = document.getElementById("company");
+
+        var RULES = [
+          {
+            id: "name",
+            test: function (v) {
+              return v.length >= 2;
+            },
+            message: "Please tell me your name."
+          },
+          {
+            id: "email",
+            test: function (v) {
+              return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+            },
+            message: "That does not look like an email address."
+          },
+          {
+            id: "projectType",
+            test: function (v) {
+              return v !== "";
+            },
+            message: "Pick the closest package — you can change it later."
+          },
+          {
+            id: "message",
+            test: function (v) {
+              return v.length >= 10;
+            },
+            message: "A sentence or two about the build, please."
+          }
+        ];
+
+        /* Errors only start following keystrokes after the first submit.
+           Marking fields red while someone is still typing their email for
+           the first time is noise, not help. */
+        var attempted = false;
+
+        function fieldWrapper(id) {
+          return document.querySelector('.field[data-field="' + id + '"]');
+        }
+
+        function showFieldError(rule, invalid) {
+          var input = document.getElementById(rule.id);
+          var wrapper = fieldWrapper(rule.id);
+          var slot = document.getElementById(rule.id + "Error");
+          if (!input || !wrapper || !slot) return;
+
+          if (invalid) {
+            wrapper.classList.add("has-error");
+            slot.textContent = rule.message;
+            input.setAttribute("aria-invalid", "true");
+          } else {
+            wrapper.classList.remove("has-error");
+            slot.textContent = "";
+            input.removeAttribute("aria-invalid");
+          }
+        }
+
+        function validate() {
+          var firstInvalid = null;
+          RULES.forEach(function (rule) {
+            var input = document.getElementById(rule.id);
+            var value = input ? String(input.value).trim() : "";
+            var invalid = !rule.test(value);
+            showFieldError(rule, invalid);
+            if (invalid && !firstInvalid) firstInvalid = input;
+          });
+          return firstInvalid;
+        }
+
+        function hideStatus() {
+          successBox.classList.remove("is-visible");
+          errorBox.classList.remove("is-visible");
+        }
+
+        function reveal(box) {
+          box.classList.add("is-visible");
+          /* block:"center" rather than the default: the sticky header would
+             otherwise sit on top of the message it just scrolled to. */
+          if (box.scrollIntoView) {
+            box.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+        }
+
+        function showSuccess(html) {
+          hideStatus();
+          successText.innerHTML = html;
+          reveal(successBox);
+        }
+
+        /* variant: "error" (something failed) or "notice" (nothing failed,
+           the visitor is being routed to email because the endpoint is not
+           deployed yet). Same region, deliberately different dressing. */
+        function showAlternate(html, variant) {
+          hideStatus();
+          errorBox.classList.remove("form-status--error");
+          errorBox.classList.remove("form-status--notice");
+          errorBox.classList.add(
+            variant === "notice" ? "form-status--notice" : "form-status--error"
+          );
+          errorIcon.className =
+            variant === "notice"
+              ? "fa fa-envelope"
+              : "fa fa-triangle-exclamation";
+          errorText.innerHTML = html;
+          reveal(errorBox);
+        }
+
+        function collect() {
+          return {
+            name: document.getElementById("name").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            projectType: document.getElementById("projectType").value,
+            budget: document.getElementById("budget").value,
+            message: document.getElementById("message").value.trim(),
+            page: window.location.href,
+            submittedAt: new Date().toISOString()
+          };
+        }
+
+        /* Every path that cannot post builds this link, so the visitor never
+           reaches a dead end with their message trapped in the form. */
+        function mailtoLink(data, label) {
+          var subject = "Quote request — " + (data.projectType || "website");
+          var body =
+            "Name: " +
+            data.name +
+            "\nEmail: " +
+            data.email +
+            "\nProject type: " +
+            data.projectType +
+            "\nBudget: " +
+            (data.budget || "not specified") +
+            "\n\n" +
+            data.message +
+            "\n";
+          return (
+            '<a href="mailto:' +
+            CONTACT_FALLBACK_EMAIL +
+            "?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            encodeURIComponent(body) +
+            '">' +
+            label +
+            "</a>"
+          );
+        }
+
+        function escapeHtml(value) {
+          return String(value).replace(/[&<>"']/g, function (ch) {
+            return {
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;"
+            }[ch];
+          });
+        }
+
+        function setBusy(busy) {
+          submitButton.disabled = busy;
+          submitButton.textContent = busy ? "Sending…" : "Send Request";
+        }
+
+        function send(data) {
+          setBusy(true);
+
+          /* mode:"no-cors" is the deliberate choice here.
+
+             An Apps Script web app cannot answer a CORS preflight — there is
+             no doOptions for web apps — and any fetch carrying an
+             application/json content-type triggers one, so the "readable
+             response" version of this fails from a static GitHub Pages
+             origin before it ever reaches the script. A no-cors POST with a
+             text/plain body is a simple request: no preflight, and it lands.
+
+             The cost, stated plainly: the response is opaque, so this can
+             confirm the request left the browser but not that the script
+             wrote the row. The Sheet is the source of truth — check it after
+             deploying, and keep doPost's own logging (see contact-form.gs).
+             Apps Script reads the body from e.postData.contents either way. */
+          var controller =
+            typeof AbortController !== "undefined"
+              ? new AbortController()
+              : null;
+          /* An opaque request gives no failure signal of its own, so a dead
+             endpoint would otherwise leave the button spinning forever. */
+          var timer = controller
+            ? window.setTimeout(function () {
+                controller.abort();
+              }, 15000)
+            : null;
+
+          fetch(CONTACT_ENDPOINT, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify(data),
+            signal: controller ? controller.signal : undefined
+          })
+            .then(function () {
+              if (timer) window.clearTimeout(timer);
+              setBusy(false);
+              form.reset();
+              showSuccess(
+                "Got it — your request is in. I'll reply to <strong>" +
+                  escapeHtml(data.email) +
+                  "</strong> within one business day."
+              );
+            })
+            .catch(function () {
+              if (timer) window.clearTimeout(timer);
+              setBusy(false);
+              showAlternate(
+                "That did not go through — your connection dropped or the " +
+                  "request timed out. Nothing was lost: " +
+                  mailtoLink(data, "send it by email instead") +
+                  " and it arrives with everything you typed.",
+                "error"
+              );
+            });
+        }
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          attempted = true;
+
+          /* Silently accepted, never delivered. A bot that is told it failed
+             just tries again. */
+          if (honeypot && honeypot.value !== "") {
+            form.reset();
+            showSuccess("Got it — your request is in.");
+            return;
+          }
+
+          var firstInvalid = validate();
+          if (firstInvalid) {
+            showAlternate(
+              "A couple of fields need another look — they are marked below.",
+              "error"
+            );
+            firstInvalid.focus();
+            return;
+          }
+
+          var data = collect();
+
+          if (!ENDPOINT_READY) {
+            /* Not an error state. The form did its job; only the direct
+               submission is not wired up yet. */
+            showAlternate(
+              "Almost there — direct submission on this page goes live " +
+                "shortly. " +
+                mailtoLink(data, "Send this request by email") +
+                " and it opens already filled in with everything above.",
+              "notice"
+            );
+            return;
+          }
+
+          send(data);
+        });
+
+        /* Once a field has been flagged, clear the flag the moment it is
+           fixed — leaving it red after a correct answer is its own bug. */
+        RULES.forEach(function (rule) {
+          var input = document.getElementById(rule.id);
+          if (!input) return;
+          var event = input.tagName === "SELECT" ? "change" : "input";
+          input.addEventListener(event, function () {
+            if (!attempted) return;
+            showFieldError(rule, !rule.test(String(input.value).trim()));
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
