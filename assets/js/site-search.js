@@ -12,13 +12,13 @@
   var ENTRIES = [
     // ----- Projects -----
     { title: "AE-OC", subtitle: "AutomotiveEntOC.com", url: "https://automotiveentertainmentoc.com/", kind: "project", keywords: "automotive entertainment events orange county car show client site", external: true },
-    { title: "Never Ending A&R", subtitle: "neverending-ar.com", url: "https://neverending-ar.com/", kind: "project", keywords: "music label artists records a&r client site", external: true },
+    { title: "Never Ending A&R", subtitle: "neverendingar.com", url: "https://neverending-ar.com/", kind: "project", keywords: "music label artists records a&r client site", external: true },
     { title: "L.A.U.R.A", subtitle: "laurala.org", url: "https://www.laurala.org/", kind: "project", keywords: "nonprofit charity foundation community los angeles client site", external: true },
-    { title: "Online Store", subtitle: "Slattson", url: "https://d-velopr.github.io/Slattson/", kind: "project", keywords: "shop store ecommerce retail cart merch client site", external: true },
-    { title: "R.H.A.C.", subtitle: "Life After Uncivil Ruthless Acts", url: "https://d-velopr.github.io/RHAC/", kind: "project", keywords: "nonprofit advocacy support community client site", external: true },
+    { title: "Online Store", subtitle: "slattson.com", url: "https://d-velopr.github.io/Slattson/", kind: "project", keywords: "shop store ecommerce retail cart merch client site", external: true },
+    { title: "R.H.A.C.", subtitle: "rhacla.org", url: "https://d-velopr.github.io/RHAC/", kind: "project", keywords: "nonprofit advocacy support community client site", external: true },
     { title: "TG6", subtitle: "teamglitch6.com", url: "https://teamglitch6.com/", kind: "project", keywords: "team glitch6 streaming gaming agency client site", external: true },
     { title: "TG6-DEV", subtitle: "tg6-dev.com", url: "https://tg6-dev.com/", kind: "project", keywords: "digital services web design seo infrastructure security client site", external: true },
-    { title: "NVOCC", subtitle: "github.com/d-velopr/nvocc", url: "https://github.com/d-velopr/nvocc", kind: "project", keywords: "shipping logistics freight ocean carrier app repo code github", external: true },
+    { title: "NVOCC", subtitle: "meridiannvocc.app", url: "https://github.com/d-velopr/nvocc", kind: "project", keywords: "shipping logistics freight ocean carrier app repo code github", external: true },
 
     // ----- Packages -----
     { title: "Landing Page", subtitle: "One page, built to convert", url: "browse.html", kind: "package", keywords: "package pricing quote single page marketing", external: false },
