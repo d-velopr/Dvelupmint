@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183 310" width="183" height="310"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183 357" width="183" height="357"
      role="img" aria-label="Landing Page package" font-family="Poppins, 'Century Gothic', Futura, 'Trebuchet MS', sans-serif">
   <title>Landing Page package</title>
   <defs>
@@ -7,9 +7,9 @@
       <stop offset="100%" stop-color="#ec6090" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect width="183" height="310" fill="#17191a"/>
-  <rect width="183" height="150" fill="url(#glow)"/>
-  <g>
+  <rect width="183" height="357" fill="#17191a"/>
+  <rect width="183" height="172" fill="url(#glow)"/>
+  <g transform="translate(91.5,113) scale(1.12) translate(-91.5,-113)">
     <rect x="59" y="48" width="66" height="132" rx="6" fill="#1f2224" stroke="#2e3132"/>
     <rect x="59" y="48" width="66" height="46" rx="6" fill="#ec6090" opacity="0.22"/>
     <rect x="68" y="62" width="34" height="4" rx="2" fill="#ec6090"/>
@@ -21,13 +21,11 @@
     <rect x="68" y="148" width="48" height="3" rx="1.5" fill="#2e3132"/>
     <rect x="68" y="156" width="30" height="3" rx="1.5" fill="#2e3132"/>
   </g>
-  <rect x="126" y="18" width="30" height="18" rx="9" fill="#ec6090" opacity="0.16"/>
-  <text x="141.0" y="30.5" font-size="9" font-weight="700" fill="#ec6090"
-        letter-spacing="0.8" text-anchor="middle">01</text>
-  <text x="22" y="190" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="1.1">LANDING PAGE</text>
-  <path d="M22 202 h139" stroke="#2e3132" stroke-width="1"/>
-  <text x="22" y="220" font-size="9" fill="#7d8385">One page, one job:</text>
-  <text x="22" y="233" font-size="9" fill="#7d8385">turn a visitor into a call.</text>
-  <rect x="22" y="246" width="26" height="3" rx="1.5" fill="#e75e8d"/>
-  <text x="56" y="250" font-size="8" font-weight="600" fill="#7d8385" letter-spacing="1.4">DVELUPR</text>
+  <text x="22" y="224" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="1.1">LANDING PAGE</text>
+  <path d="M22 236 h139" stroke="#2e3132" stroke-width="1"/>
+  <text x="22" y="254" font-size="9" fill="#7d8385">One page, one job:</text>
+  <text x="22" y="267" font-size="9" fill="#7d8385">turn a visitor into a call.</text>
+  <path d="M22 284 h139" stroke="#2e3132" stroke-width="1"/>
+  <text x="22" y="310" font-size="14" font-weight="700" fill="#ffffff" letter-spacing="0.3">$300</text>
+  <text x="22" y="327" font-size="8" font-weight="600" fill="#ec6090" letter-spacing="1.4">1 PAGE</text>
 </svg>

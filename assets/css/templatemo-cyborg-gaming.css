@@ -994,6 +994,7 @@ Featured Games Style
   border-radius: 23px;
   background-color: #1f2122;
   padding: 30px;
+  min-height: 567px;
 }
 
 .featured-games .item .thumb {
@@ -1029,6 +1030,8 @@ Featured Games Style
 
 .featured-games .item img {
   border-radius: 23px;
+  width: 100%;
+  height: auto;
 }
 
 .featured-games .item h4 {
@@ -1709,7 +1712,8 @@ body {
     text-align: center;
   }
   .top-streamers,
-  .top-downloaded {
+  .top-downloaded,
+  .featured-games {
     max-height: 100%;
     min-height: 100%;
   }
