@@ -46,22 +46,26 @@
       /* Scoped to this page. The shared stylesheet is not modified. */
 
       /* The six "What You Get" cards describe services with no photograph,
-         so an icon tile stands in for the card image. The 183/310 ratio is
+         so a drawn tile stands in for the card image. The 183/310 ratio is
          the ratio of the template image it replaces, so the carousel keeps
-         its original card height. */
+         its original card height, and each SVG uses 183x310 as its viewBox
+         so its coordinates are the tile's own pixels. */
       .outcome-tile {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         aspect-ratio: 183 / 310;
         border-radius: 23px;
+        overflow: hidden;
         background-color: #27292a;
+        background-image: radial-gradient(
+          circle at 50% 48%,
+          rgba(236, 96, 144, 0.16) 0%,
+          rgba(236, 96, 144, 0) 62%
+        );
         border: 1px solid #353637;
       }
-      .outcome-tile i {
-        font-size: 52px;
-        line-height: 1;
-        color: #ec6090;
+      .outcome-tile svg {
+        display: block;
+        width: 100%;
+        height: 100%;
       }
 
       /* Round icon badge on the same 46px footprint as the avatar it
@@ -196,7 +200,33 @@
                     <div class="item">
                       <div class="thumb">
                         <div class="outcome-tile">
-                          <i class="fa fa-table" aria-hidden="true"></i>
+                          <!-- A spreadsheet feeding the page below it: edit a row, the site redraws. -->
+                          <svg viewBox="0 0 183 310" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="31" y="46" width="121" height="96" rx="8" fill="#e6eaed" />
+                            <path d="M31 54a8 8 0 0 1 8-8h105a8 8 0 0 1 8 8v12H31z" fill="#ec6090" />
+                            <g fill="#c9d0d5">
+                              <rect x="41" y="74" width="28" height="12" rx="2" />
+                              <rect x="77" y="74" width="28" height="12" rx="2" />
+                              <rect x="113" y="74" width="29" height="12" rx="2" />
+                              <rect x="41" y="94" width="28" height="12" rx="2" />
+                              <rect x="77" y="94" width="28" height="12" rx="2" />
+                              <rect x="113" y="94" width="29" height="12" rx="2" />
+                              <rect x="41" y="114" width="28" height="12" rx="2" />
+                              <rect x="77" y="114" width="28" height="12" rx="2" />
+                              <rect x="113" y="114" width="29" height="12" rx="2" />
+                            </g>
+                            <rect x="87" y="150" width="9" height="22" rx="4.5" fill="#ec6090" />
+                            <path d="M77 168h29l-14.5 20z" fill="#ec6090" />
+                            <rect x="31" y="196" width="121" height="64" rx="8" fill="#3a3e40" />
+                            <path d="M31 204a8 8 0 0 1 8-8h105a8 8 0 0 1 8 8v10H31z" fill="#5c6367" />
+                            <g fill="#27292a">
+                              <circle cx="42" cy="205" r="2.5" />
+                              <circle cx="51" cy="205" r="2.5" />
+                              <circle cx="60" cy="205" r="2.5" />
+                            </g>
+                            <rect x="43" y="228" width="62" height="8" rx="4" fill="#aab3b9" />
+                            <rect x="43" y="244" width="40" height="8" rx="4" fill="#5c6367" />
+                          </svg>
                         </div>
                       </div>
                       <h4>
@@ -208,10 +238,25 @@
                     <div class="item">
                       <div class="thumb">
                         <div class="outcome-tile">
-                          <i
-                            class="fa fa-mobile-screen-button"
-                            aria-hidden="true"
-                          ></i>
+                          <!-- The phone in front, the desktop behind it: the small screen is drawn first. -->
+                          <svg viewBox="0 0 183 310" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="28" y="54" width="127" height="92" rx="8" fill="#3a3e40" />
+                            <rect x="37" y="63" width="109" height="74" rx="4" fill="#2b2d2e" />
+                            <rect x="46" y="72" width="38" height="6" rx="3" fill="#5c6367" />
+                            <rect x="46" y="84" width="58" height="6" rx="3" fill="#4a4f52" />
+                            <rect x="83" y="146" width="17" height="14" fill="#34383a" />
+                            <rect x="46" y="158" width="91" height="8" rx="4" fill="#3a3e40" />
+                            <rect x="61" y="118" width="61" height="124" rx="13" fill="#e6eaed" />
+                            <rect x="67" y="130" width="49" height="98" rx="6" fill="#2b2d2e" />
+                            <rect x="82" y="123" width="19" height="4" rx="2" fill="#aab3b9" />
+                            <rect x="79" y="232" width="25" height="4" rx="2" fill="#aab3b9" />
+                            <rect x="73" y="138" width="37" height="24" rx="4" fill="#ec6090" />
+                            <g fill="#5c6367">
+                              <rect x="73" y="170" width="37" height="6" rx="3" />
+                              <rect x="73" y="184" width="26" height="6" rx="3" />
+                              <rect x="73" y="198" width="32" height="6" rx="3" />
+                            </g>
+                          </svg>
                         </div>
                       </div>
                       <h4>
@@ -223,7 +268,26 @@
                     <div class="item">
                       <div class="thumb">
                         <div class="outcome-tile">
-                          <i class="fa fa-line-chart" aria-hidden="true"></i>
+                          <!-- A search that lands first, over the chart that shows it happening. -->
+                          <svg viewBox="0 0 183 310" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="26" y="48" width="131" height="34" rx="17" fill="#e6eaed" />
+                            <circle cx="47" cy="63" r="8" fill="none" stroke="#5c6367" stroke-width="3" />
+                            <path d="M53 69l7 7" stroke="#5c6367" stroke-width="3" stroke-linecap="round" />
+                            <rect x="70" y="61" width="54" height="7" rx="3.5" fill="#aab3b9" />
+                            <circle cx="42" cy="102" r="8" fill="#ec6090" />
+                            <rect x="58" y="98" width="82" height="8" rx="4" fill="#e6eaed" />
+                            <circle cx="42" cy="128" r="8" fill="#3a3e40" />
+                            <rect x="58" y="124" width="64" height="8" rx="4" fill="#5c6367" />
+                            <circle cx="42" cy="154" r="8" fill="#3a3e40" />
+                            <rect x="58" y="150" width="72" height="8" rx="4" fill="#5c6367" />
+                            <g fill="#4a4f52">
+                              <rect x="30.5" y="235" width="20" height="30" rx="4" />
+                              <rect x="64.5" y="219" width="20" height="46" rx="4" />
+                              <rect x="98.5" y="203" width="20" height="62" rx="4" />
+                            </g>
+                            <rect x="132.5" y="183" width="20" height="82" rx="4" fill="#ec6090" />
+                            <rect x="26" y="265" width="131" height="3" rx="1.5" fill="#3a3e40" />
+                          </svg>
                         </div>
                       </div>
                       <h4>
@@ -235,7 +299,36 @@
                     <div class="item">
                       <div class="thumb">
                         <div class="outcome-tile">
-                          <i class="fa fa-server" aria-hidden="true"></i>
+                          <!-- The stack that runs it, and the domain name pointed at the stack. -->
+                          <svg viewBox="0 0 183 310" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="36" y="66" width="111" height="34" rx="6" fill="#3a3e40" />
+                            <rect x="44" y="73" width="95" height="20" rx="3" fill="#2b2d2e" />
+                            <rect x="36" y="78" width="5" height="10" rx="2" fill="#5c6367" />
+                            <rect x="142" y="78" width="5" height="10" rx="2" fill="#5c6367" />
+                            <circle cx="53" cy="83" r="3.5" fill="#ec6090" />
+                            <circle cx="64" cy="83" r="3.5" fill="#5c6367" />
+                            <rect x="78" y="79" width="52" height="3" rx="1.5" fill="#5c6367" />
+                            <rect x="78" y="86" width="38" height="3" rx="1.5" fill="#4a4f52" />
+                            <rect x="36" y="108" width="111" height="34" rx="6" fill="#3a3e40" />
+                            <rect x="44" y="115" width="95" height="20" rx="3" fill="#2b2d2e" />
+                            <rect x="36" y="120" width="5" height="10" rx="2" fill="#5c6367" />
+                            <rect x="142" y="120" width="5" height="10" rx="2" fill="#5c6367" />
+                            <circle cx="53" cy="125" r="3.5" fill="#5c6367" />
+                            <circle cx="64" cy="125" r="3.5" fill="#5c6367" />
+                            <rect x="78" y="121" width="52" height="3" rx="1.5" fill="#5c6367" />
+                            <rect x="78" y="128" width="38" height="3" rx="1.5" fill="#4a4f52" />
+                            <rect x="36" y="150" width="111" height="34" rx="6" fill="#3a3e40" />
+                            <rect x="44" y="157" width="95" height="20" rx="3" fill="#2b2d2e" />
+                            <rect x="36" y="162" width="5" height="10" rx="2" fill="#5c6367" />
+                            <rect x="142" y="162" width="5" height="10" rx="2" fill="#5c6367" />
+                            <circle cx="53" cy="167" r="3.5" fill="#5c6367" />
+                            <circle cx="64" cy="167" r="3.5" fill="#5c6367" />
+                            <rect x="78" y="163" width="52" height="3" rx="1.5" fill="#5c6367" />
+                            <rect x="78" y="170" width="38" height="3" rx="1.5" fill="#4a4f52" />
+                            <circle cx="91.5" cy="222" r="26" fill="#2b2d2e" stroke="#ec6090" stroke-width="3" />
+                            <ellipse cx="91.5" cy="222" rx="11" ry="26" fill="none" stroke="#ec6090" stroke-width="2.5" />
+                            <path d="M65.5 222h52M70 209h43M70 235h43" fill="none" stroke="#ec6090" stroke-width="2.5" stroke-linecap="round" />
+                          </svg>
                         </div>
                       </div>
                       <h4>
@@ -247,7 +340,21 @@
                     <div class="item">
                       <div class="thumb">
                         <div class="outcome-tile">
-                          <i class="fa fa-credit-card" aria-hidden="true"></i>
+                          <!-- A card tapping, and the checkout button already wired to take it. -->
+                          <svg viewBox="0 0 183 310" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="22" y="76" width="118" height="76" rx="10" fill="#e6eaed" />
+                            <rect x="22" y="92" width="118" height="15" fill="#3a3e40" />
+                            <rect x="34" y="120" width="22" height="16" rx="4" fill="#aab3b9" />
+                            <rect x="64" y="125" width="26" height="6" rx="3" fill="#c9d0d5" />
+                            <rect x="96" y="125" width="26" height="6" rx="3" fill="#c9d0d5" />
+                            <g fill="none" stroke="#ec6090" stroke-linecap="round">
+                              <path d="M144 106a8 8 0 0 1 0 16" stroke-width="4" />
+                              <path d="M148 99a15 15 0 0 1 0 30" stroke-width="3.5" opacity="0.7" />
+                              <path d="M152 92a22 22 0 0 1 0 44" stroke-width="3" opacity="0.45" />
+                            </g>
+                            <rect x="34" y="184" width="115" height="38" rx="19" fill="#ec6090" />
+                            <rect x="60" y="199" width="63" height="8" rx="4" fill="#27292a" opacity="0.55" />
+                          </svg>
                         </div>
                       </div>
                       <h4>
@@ -259,7 +366,23 @@
                     <div class="item">
                       <div class="thumb">
                         <div class="outcome-tile">
-                          <i class="fa fa-life-ring" aria-hidden="true"></i>
+                          <!-- The thread does not close at launch: their message, and a live reply. -->
+                          <svg viewBox="0 0 183 310" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="44" y="62" width="113" height="68" rx="14" fill="#3a3e40" />
+                            <path d="M138 126v24l-22-24z" fill="#3a3e40" />
+                            <g fill="#5c6367">
+                              <rect x="60" y="82" width="72" height="7" rx="3.5" />
+                              <rect x="60" y="98" width="55" height="7" rx="3.5" />
+                              <rect x="60" y="114" width="64" height="7" rx="3.5" />
+                            </g>
+                            <rect x="26" y="158" width="112" height="76" rx="16" fill="#ec6090" />
+                            <path d="M46 232v26l24-26z" fill="#ec6090" />
+                            <g fill="#ffffff" opacity="0.92">
+                              <circle cx="60" cy="196" r="7" />
+                              <circle cx="82" cy="196" r="7" />
+                              <circle cx="104" cy="196" r="7" />
+                            </g>
+                          </svg>
                         </div>
                       </div>
                       <h4>
