@@ -25,10 +25,15 @@
 
 	$(window).scroll(function() {
 	  var scroll = $(window).scrollTop();
-	  var box = $('.header-text').height();
+	  var hero = $('.header-text');
 	  var header = $('header').height();
+	  // Pages with a hero dock the bar once that hero has scrolled past.
+	  // links.html has no .header-text, and hero.height() there is undefined —
+	  // every comparison against NaN is false, so the bar never docked and the
+	  // header scrolled away for good. With no hero, dock once the header clears.
+	  var threshold = hero.length ? hero.height() - header : header;
 
-	  if (scroll >= box - header) {
+	  if (scroll >= threshold) {
 	    $("header").addClass("background-header");
 	  } else {
 	    $("header").removeClass("background-header");
@@ -206,9 +211,20 @@
 	    var scrollPos = $(document).scrollTop();
 	    $('.nav a').each(function () {
 	        var currLink = $(this);
-	        var refElement = $(currLink.attr("href"));
-	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	            $('.nav ul li a').removeClass("active");
+	        var href = currLink.attr("href");
+
+	        // Only an in-page anchor names a section to track. A cross-page
+	        // href like "index.html" was being passed straight to $(), where it
+	        // parses as a selector, matches nothing, and .position() on an empty
+	        // set is undefined — so reading .top threw on every scroll event.
+	        if (!href || href.charAt(0) !== '#' || href === '#') { return; }
+
+	        var refElement = $(href);
+	        if (!refElement.length) { return; }
+
+	        var pos = refElement.position();
+	        if (pos.top <= scrollPos && pos.top + refElement.height() > scrollPos) {
+	            $('.nav a').removeClass("active");
 	            currLink.addClass("active");
 	        }
 	        else{

@@ -197,7 +197,7 @@ p {
   color: #e75e8d;
 }
 
-#checkoutButton{
+.checkoutButton{
   margin: 0;
   padding: 0;
   border: 0;

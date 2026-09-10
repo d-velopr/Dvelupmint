@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183 310" width="183" height="310"
+     role="img" aria-label="Landing Page package" font-family="Poppins, 'Century Gothic', Futura, 'Trebuchet MS', sans-serif">
+  <title>Landing Page package</title>
+  <defs>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ec6090" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#ec6090" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="183" height="310" fill="#17191a"/>
+  <rect width="183" height="150" fill="url(#glow)"/>
+  <g>
+    <rect x="59" y="48" width="66" height="132" rx="6" fill="#1f2224" stroke="#2e3132"/>
+    <rect x="59" y="48" width="66" height="46" rx="6" fill="#ec6090" opacity="0.22"/>
+    <rect x="68" y="62" width="34" height="4" rx="2" fill="#ec6090"/>
+    <rect x="68" y="72" width="48" height="3" rx="1.5" fill="#7d8385" opacity="0.7"/>
+    <rect x="68" y="79" width="40" height="3" rx="1.5" fill="#7d8385" opacity="0.45"/>
+    <rect x="68" y="104" width="30" height="11" rx="5.5" fill="#ec6090"/>
+    <rect x="68" y="126" width="48" height="3" rx="1.5" fill="#2e3132"/>
+    <rect x="68" y="134" width="38" height="3" rx="1.5" fill="#2e3132"/>
+    <rect x="68" y="148" width="48" height="3" rx="1.5" fill="#2e3132"/>
+    <rect x="68" y="156" width="30" height="3" rx="1.5" fill="#2e3132"/>
+  </g>
+  <rect x="126" y="18" width="30" height="18" rx="9" fill="#ec6090" opacity="0.16"/>
+  <text x="141.0" y="30.5" font-size="9" font-weight="700" fill="#ec6090"
+        letter-spacing="0.8" text-anchor="middle">01</text>
+  <text x="22" y="190" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="1.1">LANDING PAGE</text>
+  <path d="M22 202 h139" stroke="#2e3132" stroke-width="1"/>
+  <text x="22" y="220" font-size="9" fill="#7d8385">One page, one job:</text>
+  <text x="22" y="233" font-size="9" fill="#7d8385">turn a visitor into a call.</text>
+  <rect x="22" y="246" width="26" height="3" rx="1.5" fill="#e75e8d"/>
+  <text x="56" y="250" font-size="8" font-weight="600" fill="#7d8385" letter-spacing="1.4">DVELUPR</text>
+</svg>

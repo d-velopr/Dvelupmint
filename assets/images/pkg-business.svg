@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183 310" width="183" height="310"
+     role="img" aria-label="Business package" font-family="Poppins, 'Century Gothic', Futura, 'Trebuchet MS', sans-serif">
+  <title>Business package</title>
+  <defs>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ec6090" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#ec6090" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="183" height="310" fill="#17191a"/>
+  <rect width="183" height="150" fill="url(#glow)"/>
+  <g>
+    <rect x="30" y="52" width="124" height="128" rx="7" fill="#1f2224" stroke="#2e3132"/>
+    <rect x="30" y="52" width="124" height="18" rx="7" fill="#ec6090" opacity="0.18"/>
+    <circle cx="41" cy="61" r="3" fill="#ec6090"/>
+    <rect x="58" y="59" width="15" height="3.5" rx="1.75" fill="#7d8385" opacity="0.75"/>
+    <rect x="80" y="59" width="15" height="3.5" rx="1.75" fill="#7d8385" opacity="0.75"/>
+    <rect x="102" y="59" width="15" height="3.5" rx="1.75" fill="#7d8385" opacity="0.75"/>
+    <rect x="42" y="82" width="50" height="22" rx="4" fill="#ec6090" opacity="0.30"/>
+    <rect x="49" y="90" width="24" height="3" rx="1.5" fill="#ec6090" opacity="0.8"/>
+    <rect x="49" y="96" width="16" height="2.5" rx="1.25" fill="#7d8385" opacity="0.45"/>
+    <rect x="100" y="82" width="50" height="22" rx="4" fill="#2e3132" opacity="1"/>
+    <rect x="107" y="90" width="24" height="3" rx="1.5" fill="#7d8385" opacity="0.8"/>
+    <rect x="107" y="96" width="16" height="2.5" rx="1.25" fill="#7d8385" opacity="0.45"/>
+    <rect x="42" y="114" width="50" height="22" rx="4" fill="#2e3132" opacity="1"/>
+    <rect x="49" y="122" width="24" height="3" rx="1.5" fill="#7d8385" opacity="0.8"/>
+    <rect x="49" y="128" width="16" height="2.5" rx="1.25" fill="#7d8385" opacity="0.45"/>
+    <rect x="100" y="114" width="50" height="22" rx="4" fill="#ec6090" opacity="0.30"/>
+    <rect x="107" y="122" width="24" height="3" rx="1.5" fill="#ec6090" opacity="0.8"/>
+    <rect x="107" y="128" width="16" height="2.5" rx="1.25" fill="#7d8385" opacity="0.45"/>
+    <rect x="42" y="146" width="50" height="22" rx="4" fill="#ec6090" opacity="0.30"/>
+    <rect x="49" y="154" width="24" height="3" rx="1.5" fill="#ec6090" opacity="0.8"/>
+    <rect x="49" y="160" width="16" height="2.5" rx="1.25" fill="#7d8385" opacity="0.45"/>
+    <rect x="100" y="146" width="50" height="22" rx="4" fill="#2e3132" opacity="1"/>
+    <rect x="107" y="154" width="24" height="3" rx="1.5" fill="#7d8385" opacity="0.8"/>
+    <rect x="107" y="160" width="16" height="2.5" rx="1.25" fill="#7d8385" opacity="0.45"/>
+  </g>
+  <rect x="126" y="18" width="32" height="18" rx="9" fill="#ec6090" opacity="0.16"/>
+  <text x="142.0" y="30.5" font-size="9" font-weight="700" fill="#ec6090"
+        letter-spacing="0.8" text-anchor="middle">6-9</text>
+  <text x="22" y="190" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="1.1">BUSINESS</text>
+  <path d="M22 202 h139" stroke="#2e3132" stroke-width="1"/>
+  <text x="22" y="220" font-size="9" fill="#7d8385">Six to nine pages with</text>
+  <text x="22" y="233" font-size="9" fill="#7d8385">room to grow into.</text>
+  <rect x="22" y="246" width="26" height="3" rx="1.5" fill="#e75e8d"/>
+  <text x="56" y="250" font-size="8" font-weight="600" fill="#7d8385" letter-spacing="1.4">DVELUPR</text>
+</svg>
