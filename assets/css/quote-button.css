@@ -1,0 +1,96 @@
+/*
+ * Sticky "Free Quote" button, bottom right on every page: the right thumb's
+ * natural reach on a phone. Colours match the site's .main-button pill
+ * (#e75e8d fill, white on hover). The close button sits on the pill's
+ * top-right corner.
+ * z-index 90 keeps it under the header and its open mobile menu (100) and
+ * under the cookie banner (9990), so it can never cover Accept or Reject.
+ */
+
+.dvm-quote-fab {
+  position: fixed;
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 90;
+}
+
+.dvm-quote-fab[hidden] {
+  display: none !important;
+}
+
+.dvm-quote-fab .dvm-quote-fab__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 0 28px;
+  border-radius: 28px;
+  background-color: #e75e8d;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color .3s, color .3s;
+}
+
+.dvm-quote-fab .dvm-quote-fab__link:hover {
+  background-color: #fff;
+  color: #e75e8d;
+}
+
+.dvm-quote-fab .dvm-quote-fab__close {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid #e75e8d;
+  border-radius: 50%;
+  background-color: #1f2122;
+  color: #fff;
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color .3s;
+}
+
+/* A 44px tap area around the 26px circle, so it's easy to hit on a phone. */
+.dvm-quote-fab .dvm-quote-fab__close::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  bottom: -9px;
+  left: -9px;
+}
+
+.dvm-quote-fab .dvm-quote-fab__close:hover {
+  background-color: #e75e8d;
+}
+
+.dvm-quote-fab .dvm-quote-fab__link:focus-visible,
+.dvm-quote-fab .dvm-quote-fab__close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* Out of the way while the consent banner is up, and while someone is typing
+   into a form (a phone keyboard pushes fixed elements up over the fields). */
+body:has(#dvm-consent:not([hidden])) .dvm-quote-fab,
+body:has(input:focus, textarea:focus, select:focus) .dvm-quote-fab {
+  display: none;
+}
+
+/* Room under the footer's legal links so the button never sits on them. */
+@media (max-width: 991px) {
+  footer {
+    padding-bottom: 88px;
+  }
+}

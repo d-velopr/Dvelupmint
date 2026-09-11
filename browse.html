@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <script src="assets/js/consent.js?v=1"></script>
+    <script src="assets/js/consent.js?v=2"></script>
 
     <link rel="stylesheet" href="assets/css/poppins.css?v=1" />
 
@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="assets/css/site-search.css" />
     <link rel="stylesheet" href="assets/css/mobile.css" />
     <link rel="stylesheet" href="assets/css/consent.css?v=1" />
+    <link rel="stylesheet" href="assets/css/quote-button.css?v=3" />
 
     <!-- Keep every "Most Popular Live Projects" thumbnail the same square size,
          regardless of the source image's aspect ratio -->
@@ -269,7 +270,9 @@
             <!-- ***** Featured Games End ***** -->
 
             <!-- ***** How To Start Start ***** -->
-            <div id="sales-gg" class="start-stream">
+            <!-- QR-code target (assets/images/qrcode.png): browse.html#sales-gg.
+                 scroll-margin keeps the heading clear of the 70px header that docks on scroll. -->
+            <div id="sales-gg" class="start-stream" style="scroll-margin-top: 90px">
               <div class="col-lg-12">
                 <div class="heading-section">
                   <h4><em>How To Purchase</em> Your Website</h4>
@@ -523,6 +526,12 @@
         </div>
       </div>
     </footer>
+
+    <div class="dvm-quote-fab" id="dvm-quote-fab">
+      <a href="contact.html#quote" class="dvm-quote-fab__link">Free Quote</a>
+      <button type="button" class="dvm-quote-fab__close" aria-label="Close the Free Quote button">&times;</button>
+    </div>
+    <script src="assets/js/quote-button.js?v=1"></script>
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->

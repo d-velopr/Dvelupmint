@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <script src="assets/js/consent.js?v=1"></script>
+    <script src="assets/js/consent.js?v=2"></script>
 
     <link rel="stylesheet" href="assets/css/poppins.css?v=1" />
 
@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="assets/css/site-search.css" />
     <link rel="stylesheet" href="assets/css/mobile.css" />
     <link rel="stylesheet" href="assets/css/consent.css?v=1" />
+    <link rel="stylesheet" href="assets/css/quote-button.css?v=3" />
     <link rel="stylesheet" href="assets/css/legal.css?v=1" />
   </head>
 
@@ -158,6 +159,7 @@
               <p>I've switched off Google signals, the feature that connects visits to signed-in Google accounts, and I've switched off ad personalization. Accepting turns on analytics and nothing else. Google Analytics shows me totals and trends, such as visits per page. It doesn't show me your name or email address.</p>
               <h3>Your cookie choice</h3>
               <p>Your browser stores your Accept or Reject choice in its local storage, under the name <code>dvm.consent</code>. It isn't a cookie, and it stays in your browser. The banner asks again after 12 months, or sooner if I change how analytics work on this site.</p>
+              <p>If you leave the banner without choosing, it shows once per visit rather than on every page. Your browser notes that it has asked in its session storage, under the name <code>dvm.consent.seen</code>, which clears when you close the tab. Analytics stay off until you accept.</p>
               <h3>GitHub's server logs</h3>
               <p>GitHub hosts this site on its GitHub Pages service. GitHub logs the IP address of every visitor for security purposes, whether or not you accept analytics. GitHub decides what else those logs hold and how long it keeps them. I don't control them.</p>
               <h3>Fonts and other files</h3>
@@ -242,6 +244,12 @@
         </div>
       </div>
     </footer>
+
+    <div class="dvm-quote-fab" id="dvm-quote-fab">
+      <a href="contact.html#quote" class="dvm-quote-fab__link">Free Quote</a>
+      <button type="button" class="dvm-quote-fab__close" aria-label="Close the Free Quote button">&times;</button>
+    </div>
+    <script src="assets/js/quote-button.js?v=1"></script>
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->

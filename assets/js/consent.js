@@ -4,6 +4,8 @@
  * Basic Consent Mode: gtag.js is not requested at all until the visitor
  * accepts. Accept grants analytics_storage only; ad_* stay denied.
  * Bump ?v= on every page that loads this file whenever it changes.
+ * An undecided visitor sees the banner once per browser session (tracked in
+ * sessionStorage, not a cookie); analytics stay off until they Accept.
  */
 (function () {
   "use strict";
@@ -13,6 +15,7 @@
   var CONSENT_VERSION = 1;
   var MAX_AGE_DAYS = 365;
   var DISABLE_KEY = "ga-disable-" + GA_ID;
+  var SEEN_KEY = "dvm.consent.seen";
 
   var w = window, doc = document;
   var gaLoaded = false, current = "denied", banner = null, opener = null;
@@ -39,6 +42,15 @@
     try {
       w.localStorage.setItem(STORE_KEY, JSON.stringify({ v: CONSENT_VERSION, analytics: value, ts: new Date().getTime() }));
     } catch (e) { /* storage blocked: the choice holds for this page only */ }
+  }
+
+  // True if the banner already showed this session without a choice being made.
+  function seenThisSession() {
+    try { return w.sessionStorage.getItem(SEEN_KEY) === "1"; } catch (e) { return false; }
+  }
+
+  function markSeen() {
+    try { w.sessionStorage.setItem(SEEN_KEY, "1"); } catch (e) { /* storage blocked: banner shows on every page */ }
   }
 
   function loadGA() {
@@ -166,9 +178,15 @@
     grant();
   } else if (stored || navigator.globalPrivacyControl === true) {
     deny(); // explicit Reject, or GPC with no stored choice (GPC is never stored)
-  } else if (doc.readyState === "loading") {
-    doc.addEventListener("DOMContentLoaded", function () { show(false); });
+  } else if (seenThisSession()) {
+    // Undecided and already asked this session: stay quiet. Nothing loads
+    // without Accept, and the footer's Cookie settings still opens the banner.
   } else {
-    show(false);
+    markSeen();
+    if (doc.readyState === "loading") {
+      doc.addEventListener("DOMContentLoaded", function () { show(false); });
+    } else {
+      show(false);
+    }
   }
 })();
