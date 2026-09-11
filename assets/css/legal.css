@@ -1,0 +1,171 @@
+/*
+ * Privacy Policy and Terms & Conditions pages.
+ * Sits inside the template's .page-content card (#27292a, 23px radius) and
+ * reuses its palette: white headings, #e75e8d / #ec6090 accent, Poppins.
+ * Body text is lighter than the template's #666 because these pages are read
+ * end to end; #c7c7c7 on #27292a is about 9:1.
+ * The template resets lists (ul, li { list-style: none }) and strips link
+ * underlines with !important; both are restored for .legal-doc only.
+ */
+
+.legal-doc {
+  max-width: 72ch;
+  margin: 0 auto;
+  color: #c7c7c7;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+.legal-doc h1 {
+  margin: 0 0 8px;
+  font-size: 34px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #fff;
+}
+
+.legal-doc .legal-updated {
+  margin: 0 0 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #3a3d3e;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #999;
+}
+
+.legal-doc h2 {
+  margin: 48px 0 14px;
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: #fff;
+}
+
+.legal-doc h3 {
+  margin: 32px 0 10px;
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #ec6090;
+}
+
+.legal-doc .legal-updated + h2,
+.legal-doc h2 + h3 {
+  margin-top: 0;
+}
+
+.legal-doc p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #c7c7c7;
+}
+
+.legal-doc ul,
+.legal-doc ol {
+  margin: 0 0 18px;
+  padding-left: 1.4em;
+}
+
+.legal-doc ul { list-style: disc; }
+.legal-doc ol { list-style: decimal; }
+
+.legal-doc li {
+  display: list-item;
+  margin: 0 0 8px;
+  padding-left: 4px;
+  list-style: inherit;
+}
+
+.legal-doc li::marker {
+  color: #e75e8d;
+}
+
+.legal-doc strong {
+  font-weight: 600;
+  color: #fff;
+}
+
+.legal-doc a {
+  color: #e75e8d;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  transition: color .3s;
+}
+
+.legal-doc a:hover {
+  color: #fff;
+}
+
+.legal-doc a:focus-visible,
+.legal-doc .legal-btn:focus-visible {
+  outline: 2px solid #ec6090;
+  outline-offset: 2px;
+}
+
+.legal-doc code {
+  padding: 2px 7px;
+  border-radius: 6px;
+  background-color: #1f2122;
+  color: #fff;
+  font-size: 0.875em;
+  font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.legal-doc .legal-pending {
+  padding: 24px;
+  border: 1px dashed #3a3d3e;
+  border-radius: 18px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #999;
+}
+
+/* Matches the template's .main-button pill. */
+.legal-doc .legal-btn {
+  margin-top: 16px;
+  padding: 12px 30px;
+  border: 0;
+  border-radius: 25px;
+  background-color: #e75e8d;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color .3s, color .3s;
+}
+
+.legal-doc .legal-btn:hover {
+  background-color: #fff;
+  color: #e75e8d;
+}
+
+@media (max-width: 767px) {
+  /* The template drops .page-content to 0 vertical padding on phones. */
+  .legal-doc {
+    padding: 40px 0;
+    font-size: 15px;
+  }
+
+  .legal-doc h1 {
+    font-size: 26px;
+  }
+
+  .legal-doc h2 {
+    margin-top: 40px;
+    font-size: 19px;
+  }
+
+  .legal-doc h3 {
+    font-size: 16px;
+  }
+
+  .legal-doc p {
+    font-size: 15px;
+  }
+}

@@ -1,7 +1,7 @@
 /*
  * Dvelupmint site-wide nav search.
  * Vanilla JS, no jQuery. Safe to load on any page: no-ops if the markup is absent.
- * The index is inline on purpose - 19 entries do not justify a request, and a
+ * The index is inline on purpose - 21 entries do not justify a request, and a
  * fetch() would fail outright when the site is opened over file://.
  */
 (function () {
@@ -33,7 +33,9 @@
     { title: "Browse", subtitle: "Packages and top projects", url: "browse.html", kind: "page", keywords: "packages pricing quote projects portfolio catalog", external: false },
     { title: "Analytics", subtitle: "Per-project analytics", url: "analytics.html", kind: "page", keywords: "analytics stats metrics traffic users launched status", external: false },
     { title: "Details", subtitle: "What you get, and live client sites", url: "details.html", kind: "page", keywords: "included services outcomes live client sites details what you get", external: false },
-    { title: "Contact", subtitle: "Request a free quote", url: "contact.html", kind: "page", keywords: "quote contact form email hire get in touch social links", external: false }
+    { title: "Contact", subtitle: "Request a free quote", url: "contact.html", kind: "page", keywords: "quote contact form email hire get in touch social links", external: false },
+    { title: "Privacy Policy", subtitle: "Your data and cookie choice", url: "privacy.html", kind: "page", keywords: "privacy policy cookies cookie settings analytics consent gdpr ccpa personal data information rights delete", external: false },
+    { title: "Terms & Conditions", subtitle: "Prices, content and liability", url: "terms.html", kind: "page", keywords: "terms conditions terms of use legal warranty liability prices quotes estimates governing law", external: false }
   ];
 
   var NO_MATCH = { title: "No matches — get a free quote →", subtitle: "", url: "contact.html#quote", kind: "quote", keywords: "", external: false };
