@@ -1,0 +1,140 @@
+/*
+ * Cookie consent banner (injected by assets/js/consent.js) and the footer
+ * legal row. Colours and radii come from templatemo-cyborg-gaming.css
+ * (#1f2122 panel, #e75e8d / #ec6090 accent, 25px pills, Poppins).
+ * Accept and Reject share one class and must never differ in any property.
+ * z-index 9990: above the header (100/999), below the preloader (9999).
+ */
+
+#dvm-consent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9990;
+  background-color: #1f2122;
+  border-top: 2px solid #e75e8d;
+  box-shadow: 0 -12px 32px rgba(0, 0, 0, 0.45);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+#dvm-consent[hidden],
+#dvm-consent .dvm-consent__status[hidden] {
+  display: none !important;
+}
+
+#dvm-consent .dvm-consent__inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 18px 24px;
+}
+
+#dvm-consent .dvm-consent__copy {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+#dvm-consent p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #fff;
+  font-weight: 300;
+}
+
+#dvm-consent .dvm-consent__status {
+  margin-top: 4px;
+  color: #ec6090;
+  font-weight: 500;
+}
+
+#dvm-consent a {
+  color: #e75e8d;
+  font-weight: 500;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+#dvm-consent a:hover {
+  color: #fff;
+}
+
+#dvm-consent .dvm-consent__actions {
+  display: flex;
+  gap: 12px;
+  flex: 0 0 300px;
+}
+
+#dvm-consent .dvm-consent__btn {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 44px;
+  margin: 0;
+  padding: 10px 20px;
+  border: 1px solid #e75e8d;
+  border-radius: 25px;
+  background-color: #e75e8d;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color .3s, color .3s;
+}
+
+#dvm-consent .dvm-consent__btn:hover {
+  background-color: #fff;
+  color: #e75e8d;
+}
+
+#dvm-consent .dvm-consent__btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  #dvm-consent .dvm-consent__inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 16px 20px;
+  }
+
+  #dvm-consent .dvm-consent__actions {
+    flex: 0 0 auto;
+  }
+}
+
+/* Footer legal row: sits under the copyright line without doubling its padding. */
+footer p.footer-legal {
+  padding-top: 0;
+  margin-top: -14px;
+  font-size: 13px;
+}
+
+footer .footer-legal__btn {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+footer .footer-legal__btn:hover {
+  color: #ec6090;
+}
+
+footer .footer-legal a:focus-visible,
+footer .footer-legal__btn:focus-visible {
+  outline: 2px solid #ec6090;
+  outline-offset: 2px;
+}
