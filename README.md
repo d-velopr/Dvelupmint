@@ -1,17 +1,10 @@
 # Organized Project Directory
-UPDATE
 
-I just registered the githubrepo under https://dvelupmint.com/ with an email redirect contact@dvelupmint.com --> dvelupr@proton.me
+TODO
 
-1. remove all instances of dvelupr@proton.me and replace with contact@dvelupmint.com
-2. Add this google analytics tag and add the consent to cookies so we do not get into any law suit:
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HYSG6VK205"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+1. fix the banner bug , it pops up upon every page being loaded , i want it to just pop up once every cookie session.
+2. Add a "Free Quote" sticky button to the bottom right side of all pages for sales promotion that redirects to contact.html keep same colors as the one in browse.html and make it easy to click especially for mobile next to the thumb for right handed people
 
-  gtag('config', 'G-HYSG6VK205');
-</script>
-3. Integrate a Terms & Conditions and Privacy Policy page for legal
+browse.html 
+3. Add an id to the How To Purchase Your Website section , i want to create a QR code that redirects to that div for sales promo
+
