@@ -97,8 +97,8 @@
     banner.innerHTML =
       '<div class="dvm-consent__inner">' +
         '<div class="dvm-consent__copy">' +
-          '<p class="dvm-consent__text">I\'d like to use Google Analytics cookies to count visits and see which pages get read. ' +
-          'They stay off unless you accept. <a href="privacy.html">Privacy Policy</a></p>' +
+          '<p class="dvm-consent__text">I\'d like to use Google Analytics cookies to count visits and see which pages people read. ' +
+          'Google receives that data. The cookies stay off unless you accept. <a href="privacy.html">Privacy Policy</a></p>' +
           '<p class="dvm-consent__status" hidden></p>' +
         '</div>' +
         '<div class="dvm-consent__actions">' +
