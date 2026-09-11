@@ -48,6 +48,16 @@
     color: #ec6090 !important;
   }
 
+  /* Contact is the last item, and the template turns the last item into a
+     pink pill when it is active or hovered. Its selectors outrank the two
+     rules above, so on contact.html the open menu showed a pink button.
+     Match the specificity and render it like every other row. */
+  .header-area .main-nav .nav li:last-child a.active,
+  .header-area .main-nav .nav li:last-child:hover a {
+    background-color: #1f2122 !important;
+    color: #ec6090 !important;
+  }
+
   /* Search. The template hides #search below 992px, so on a phone the
      site had no search at all. It comes back as the first row of the open
      menu. :has() lets the open state live on the existing .menu-trigger;
