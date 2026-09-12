@@ -353,10 +353,15 @@
     text-align: center;
   }
 
-  /* The template pulls the bottom button half out of its panel; on a
-     phone that collides with the next panel's top edge. */
+  /* The template pulls the bottom button half out of its panel (-53px); on a
+     phone that collides with the next panel's top edge, or - where the panel
+     is the last thing on the page (browse "Most Popular Live Projects",
+     details "Live Client Sites") - leaves the pill sitting almost on the
+     page-content card's bottom border, two rounded edges a few pixels apart.
+     These are the only three sections the template pulls this way. */
   .most-popular .main-button,
-  .gaming-library .main-button {
+  .gaming-library .main-button,
+  .live-stream .main-button {
     margin-bottom: 0;
     margin-top: 10px;
   }

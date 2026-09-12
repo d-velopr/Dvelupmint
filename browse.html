@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="assets/css/owl.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/site-search.css" />
-    <link rel="stylesheet" href="assets/css/mobile.css?v=3" />
+    <link rel="stylesheet" href="assets/css/mobile.css?v=4" />
     <link rel="stylesheet" href="assets/css/consent.css?v=1" />
     <link rel="stylesheet" href="assets/css/quote-button.css?v=3" />
 
@@ -82,13 +82,26 @@
           display: none;
         }
 
-        /* The template pulls this button 53px below its panel so it straddles
-           the edge. On a phone that leaves the button's pill sitting almost on
-           the page-content card's bottom border - two rounded edges a few
-           pixels apart. Keep it inside the panel instead, clear of both. */
-        .live-stream .main-button {
-          margin-top: 10px;
-          margin-bottom: 0;
+        /* "How To Purchase Your Website" is 15.8em wide in Poppins 700, and
+           the phone rule leaves it (100vw - 48px): 12px of column gutter plus
+           12px of .page-content padding each side. At the template's flat 20px
+           it needs 316px, so it survives a 390px screen and wraps on a 360px
+           one. Sizing it off the width it actually has lets it run bigger than
+           20px wherever there is room and stay on one line where there isn't.
+           The 16.3 divisor (vs 15.8) is headroom for rounding and for the
+           fallback face during the font swap; the 17px floor is still a single
+           line at 320px, the narrowest phone worth targeting. */
+        #sales-gg .heading-section h4 {
+          font-size: clamp(17px, calc((100vw - 48px) / 16.3), 26px);
+          margin-bottom: 8px;
+        }
+
+        /* The title sat ~105px above the first step card (30px off the h4,
+           60px off the section, 15px off the card). That reads as a gap on a
+           phone, where the card is the next thing on screen rather than one of
+           three across. */
+        #sales-gg .heading-section {
+          margin-bottom: 24px;
         }
       }
     </style>
