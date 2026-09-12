@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="assets/css/poppins.css?v=1" />
 
     <title>Dvelupmint | Details</title>
+    <meta
+      name="description"
+      content="The questions clients ask before hiring: updating the site yourself, how it looks on phones, being found on Google, and who owns the finished build."
+    />
+    <link rel="canonical" href="https://dvelupmint.com/details.html" />
+
     <!-- Favicons keep the original mark on purpose: the detailed mark smears at 16px.
          Do not regenerate these from dvelupmint-icon.svg. -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav/favicon-32x32.png?v=3" />
@@ -304,6 +310,69 @@
         object-fit: cover;
       }
     </style>
+
+    <!-- Structured data. Keep in step with the visible page:
+         Google treats schema that contradicts the content as spam. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://dvelupmint.com/details.html#faq",
+      "isPartOf": {
+        "@id": "https://dvelupmint.com/#website"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I update it myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Your prices, hours and photos live in a Google Sheet. Change a cell and the site shows the new value. No site builder to learn, no plugins to keep updated. Anyone on your team with the sheet can make an edit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will it look right on phones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every page is designed for the phone first, then scaled up. Layouts restack for small screens instead of shrinking. Buttons, menus and forms are sized for a thumb. Text stays readable without pinching to zoom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will people find it on Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It launches set up for search, with analytics already running. Titles and descriptions written for every page. Google Analytics installed, so you see visitors from day one. Pages tuned for speed, which search engines reward."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I own it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The domain and hosting are in your name. We handle the setup: domain, hosting and the secure https address. The logins are handed over to you at launch. If you ever move on, the site goes with you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can it take payments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When you need it to. Checkout runs on Stripe. Take deposits, one-off payments or run a full online store. Card details go to Stripe and never touch your site. Add it at launch, or later when you're ready."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "30 days of support come with every build. Fixes and small edits in the first 30 days, included. You message a person, not a ticket system. Ongoing support is there when the 30 days are up."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>

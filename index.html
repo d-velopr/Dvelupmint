@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="assets/css/poppins.css?v=1" />
 
     <title>Dvelupmint | Home</title>
+    <meta
+      name="description"
+      content="Eight custom-built websites and web apps, seven of them live. Browse the portfolio, check the real traffic numbers, and request a fixed-price quote."
+    />
+    <link rel="canonical" href="https://dvelupmint.com/" />
+
     <!-- Favicons keep the original mark on purpose: the detailed mark smears at 16px.
          Do not regenerate these from dvelupmint-icon.svg. -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/fav/favicon-32x32.png?v=3" />
@@ -48,6 +54,60 @@
     <link rel="stylesheet" href="assets/css/mobile.css?v=4" />
     <link rel="stylesheet" href="assets/css/consent.css?v=1" />
     <link rel="stylesheet" href="assets/css/quote-button.css?v=3" />
+
+    <!-- Structured data. Keep in step with the visible page:
+         Google treats schema that contradicts the content as spam. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://dvelupmint.com/#organization",
+          "additionalType": "https://schema.org/ProfessionalService",
+          "name": "Dvelupmint",
+          "url": "https://dvelupmint.com/",
+          "description": "Dvelupmint designs and builds custom websites and web apps at a fixed price agreed up front.",
+          "email": "contact@dvelupmint.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://dvelupmint.com/assets/images/brand/dvelupmint-icon-1024.png",
+            "width": 1024,
+            "height": 1024
+          },
+          "image": "https://dvelupmint.com/assets/images/brand/og-card.png",
+          "sameAs": [
+            "https://github.com/d-velopr"
+          ],
+          "areaServed": "Worldwide",
+          "knowsAbout": [
+            "Web design",
+            "Web development",
+            "Web applications",
+            "E-commerce",
+            "Search engine optimization",
+            "Web analytics"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "contact@dvelupmint.com",
+            "availableLanguage": "English"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://dvelupmint.com/#website",
+          "url": "https://dvelupmint.com/",
+          "name": "Dvelupmint",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://dvelupmint.com/#organization"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>

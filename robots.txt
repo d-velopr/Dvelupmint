@@ -1,0 +1,9 @@
+# https://dvelupmint.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Server-side source kept in the repo for reference; not part of the site.
+Disallow: /contact-form.gs
+
+Sitemap: https://dvelupmint.com/sitemap.xml
