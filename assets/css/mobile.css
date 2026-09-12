@@ -1,7 +1,7 @@
 /*
  * Phone and tablet layer, loaded on every page after the template and
- * site-search stylesheets. One rule, the card fix below, applies at every
- * width because the same bug shows on desktop. assets/css/templatemo-cyborg-gaming.css is not
+ * site-search stylesheets. The first two blocks below apply at every width,
+ * because the bugs they fix show on desktop too. assets/css/templatemo-cyborg-gaming.css is not
  * edited; each rule here overrides one of its breakpoints.
  *
  * The header rules use the template's own 992px breakpoint, since that is
@@ -16,6 +16,152 @@
    happens on phones, tablets, and 1024-1280px desktops alike. */
 .most-popular .card-link {
   display: flow-root;
+}
+
+/* Project domain labels. The cards used to show a shortened label
+   ("AutomotiveEntOC.com") over a link that went somewhere else; they now print
+   the real destination, which is about twice as long as anything the template
+   was drawn for. Three panels show a domain under a project name and each one
+   broke differently. Throughout, the domain is treated as metadata rather than
+   a title - it drops a size and is allowed to wrap, while the name above it
+   keeps its weight. A 29-character domain overruns a 1280px desktop as readily
+   as a phone, so most of this is not behind a media query.
+
+   Home "Most Popular". Most cards keep the template's own arrangement - name
+   and domain stacked on the left, the two metrics stacked to their right - and
+   the grid stays four across. That only works while the domain fits the ~174px
+   left beside the metrics, which five of the eight do.
+
+   The three long ones (automotiveentertainmentoc.com and the two GitHub Pages
+   URLs) cannot: measured in the page, the longest needs 201px at 12px. Those
+   cards close the h4 after the name and emit the domain as a sibling after the
+   metric list instead, so clearing the float drops it onto a full-width line of
+   its own underneath - the metrics stay where they always were, above it. */
+
+/* One size for every domain, short or long, so the grid reads evenly. The
+   template inherited 15px from the h4, which the long URLs cannot afford. */
+.most-popular .item .card-domain {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* The three long-URL cards carry .long-url on the link. Their metric list runs
+   side by side on one line rather than the template's stacked pair: the domain
+   below already takes a full line of its own, so the stacked version left the
+   card taller than the five that keep the template layout. */
+.most-popular .long-url ul {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.most-popular .long-url ul li {
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Long-URL cards only: the domain sits outside the h4, after the metric list.
+   break-all because between 992 and 1199 the four-card grid squeezes a card to
+   ~140px of content - narrower than any readable size of these URLs - so they
+   wrap there whatever happens, and filling each line beats orphaning "d-". */
+.most-popular .card-link > .card-domain {
+  clear: both;
+  margin-top: 6px;
+  word-break: break-all;
+}
+
+/* Home "Web App Analytics" and the Analytics page rows, 993px and up. The
+   template lays these out as six inline-block cells on fixed percentages that
+   do not add up the same way at every container step: at 1024px the name cell
+   was ~160px, so the domain ran straight over "Launched" and the Visit Site
+   button wrapped inside its own pill. Percentages cannot be tuned to fit both
+   1024 and 1440, so the row becomes a flex line instead - thumbnail and button
+   size to their content, the name/domain cell takes a double share of what is
+   left, and min-width:0 lets it shrink rather than overflow. Below 993px the
+   template's own !important rules take over, and the 767px block restacks the
+   row for phones. */
+
+@media (min-width: 993px) {
+  .gaming-library .item ul {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* The four text cells split the row 3:1:1:1 from a zero basis, so the name
+     and its domain get three times the room - the longest domain needs about
+     195px and 1024px leaves only ~470px for all four - and because the basis
+     ignores content, every row lands its columns in the same place. Sizing
+     from content instead staggered "Launched" by 30px between rows. Nothing
+     is nowrap: at 1024 a stat heading would rather wrap to two lines than run
+     over the column beside it. */
+  .gaming-library .item ul li {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  .gaming-library .item ul li:nth-child(2) {
+    flex-grow: 3;
+  }
+
+  /* From 1200 up the row has room to spare, and holding the name at a triple
+     share just parked it in an empty gap while "Monthly Traffic" still wrapped.
+     A double share still clears the longest domain by 60px and gives each stat
+     enough to sit on one line. */
+  @media (min-width: 1200px) {
+    .gaming-library .item ul li:nth-child(2) {
+      flex-grow: 2;
+    }
+  }
+
+  /* Thumbnail and button keep their own size. */
+  .gaming-library .item ul li:first-child,
+  .gaming-library .item ul li:last-child {
+    flex: 0 0 auto;
+    width: auto;
+    margin-top: 0;
+  }
+
+  /* The template pulls the thumbnail 30px above the row to overlap the divider;
+     that was measured against the old inline-block baseline and just offsets
+     the image inside a centred flex line. */
+  .gaming-library .item ul li img {
+    margin-top: 0;
+  }
+}
+
+/* The domain is metadata under the project name, not a peer of it, and 12px
+   matches the card domains on the home page. At the template's 15px the longest
+   one overran the name cell at 1024px by two characters. */
+.gaming-library .item ul li span {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* Browse "Top Projects". This panel is a col-lg-4 sidebar, and beside the
+   floated thumbnail the text column is only about 150px - the longest domain
+   needs 195px at a readable size, so it wrapped, and the wrapped line fell
+   below the float and sat flush against the panel's left edge ("toc.com"
+   adrift under the picture). browse.html now emits the domain after the rating
+   spans instead of directly under the name, so clearing the float gives it the
+   panel's full width and it fits on one line. The name keeps the template's
+   own float-wrapped layout - the project names are short. */
+/* The rating pairs are one unit each; without this the icon stayed on one line
+   and its number dropped to the next in the narrow 1024px sidebar. */
+.top-downloaded ul li span {
+  white-space: nowrap;
+}
+
+.top-downloaded ul li .card-domain {
+  clear: both;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-right: 52px;
+  overflow-wrap: anywhere;
 }
 
 /* ---------------------------------------------------------------------
@@ -161,10 +307,6 @@
     line-height: 1.25;
   }
 
-  .most-popular .item h4 span {
-    overflow-wrap: anywhere;
-  }
-
   /* Home "Web App Analytics" and the Analytics page rows. The template's
      767px rule asks for one column, but its 992px rule comes later in the
      file with the same !important and wins, so phones got two 48% columns
@@ -204,10 +346,6 @@
     margin-top: 0;
     width: 60px;
     height: 60px;
-  }
-
-  .gaming-library .item ul li span {
-    overflow-wrap: anywhere;
   }
 
   .gaming-library .item .main-border-button a {

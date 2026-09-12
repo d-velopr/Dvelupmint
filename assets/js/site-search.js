@@ -11,11 +11,11 @@
 
   var ENTRIES = [
     // ----- Projects -----
-    { title: "AE-OC", subtitle: "AutomotiveEntOC.com", url: "https://automotiveentertainmentoc.com/", kind: "project", keywords: "automotive entertainment events orange county car show client site", external: true },
-    { title: "Never Ending A&R", subtitle: "neverendingar.com", url: "https://neverending-ar.com/", kind: "project", keywords: "music label artists records a&r client site", external: true },
+    { title: "AE-OC", subtitle: "automotiveentertainmentoc.com", url: "https://automotiveentertainmentoc.com/", kind: "project", keywords: "automotive entertainment aeoc automotiveentoc events orange county car show client site", external: true },
+    { title: "Never Ending A&R", subtitle: "neverending-ar.com", url: "https://neverending-ar.com/", kind: "project", keywords: "music label artists records a&r client site", external: true },
     { title: "L.A.U.R.A", subtitle: "laurala.org", url: "https://www.laurala.org/", kind: "project", keywords: "nonprofit charity foundation community los angeles client site", external: true },
-    { title: "Online Store", subtitle: "slattson.com", url: "https://d-velopr.github.io/Slattson/", kind: "project", keywords: "shop store ecommerce retail cart merch client site", external: true },
-    { title: "R.H.A.C.", subtitle: "rhacla.org", url: "https://d-velopr.github.io/RHAC/", kind: "project", keywords: "nonprofit advocacy support community client site", external: true },
+    { title: "Online Store", subtitle: "d-velopr.github.io/Slattson", url: "https://d-velopr.github.io/Slattson/", kind: "project", keywords: "slattson shop store ecommerce retail cart merch client site", external: true },
+    { title: "R.H.A.C.", subtitle: "d-velopr.github.io/RHAC", url: "https://d-velopr.github.io/RHAC/", kind: "project", keywords: "rhac rhacla nonprofit advocacy support community client site", external: true },
     { title: "TG6", subtitle: "teamglitch6.com", url: "https://teamglitch6.com/", kind: "project", keywords: "team glitch6 streaming gaming agency client site", external: true },
     { title: "TG6-DEV", subtitle: "tg6-dev.com", url: "https://tg6-dev.com/", kind: "project", keywords: "digital services web design seo infrastructure security client site", external: true },
     { title: "NVOCC", subtitle: "meridiannvocc.app", url: "https://github.com/d-velopr/nvocc", kind: "project", keywords: "shipping logistics freight ocean carrier app repo code github", external: true },
