@@ -73,6 +73,23 @@
           aspect-ratio: 2 / 1;
           object-position: top;
         }
+
+        /* "Top Projects" is the col-lg-4 sidebar beside Featured Packages.
+           Stacked on a phone it just repeats the three projects that the
+           "Most Popular Live Projects" cards below already show, so it is
+           dropped here. Its empty column collapses to nothing. */
+        .top-downloaded {
+          display: none;
+        }
+
+        /* The template pulls this button 53px below its panel so it straddles
+           the edge. On a phone that leaves the button's pill sitting almost on
+           the page-content card's bottom border - two rounded edges a few
+           pixels apart. Keep it inside the panel instead, clear of both. */
+        .live-stream .main-button {
+          margin-top: 10px;
+          margin-bottom: 0;
+        }
       }
     </style>
   </head>
