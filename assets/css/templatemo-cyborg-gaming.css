@@ -496,10 +496,20 @@ Header Style
   color: #e75e8d !important;
 }
 
-.header-area .main-nav .nav li:last-child:hover a,
-.header-area .main-nav .nav li:last-child a.active {
+.header-area .main-nav .nav li:last-child:hover a {
   color: #fff !important;
   background-color: #e75e8d !important;
+}
+
+/* Contact is the last item, so the template painted it a pink pill on the
+   page it links to - and the brand mark inside it is the same pink, which
+   left the icon invisible. The current page is marked the way every other
+   item marks it instead: pink text, pill left alone. Declared after the
+   hover rule above, which it ties on specificity, so contact.html keeps
+   this treatment on hover too. */
+.header-area .main-nav .nav li:last-child a.active {
+  color: #e75e8d !important;
+  background-color: #27292a !important;
 }
 
 .background-header .main-nav .nav li:hover a,
