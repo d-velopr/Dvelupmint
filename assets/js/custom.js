@@ -87,6 +87,27 @@
 		}
 	});
 
+	// Owl only resets its autoplay clock while the carousel is paused, so a swipe
+	// or a nav click can be followed by an auto advance a fraction of a second
+	// later. Restart the timer on user interaction so every slide gets a full
+	// interval. No timeout is passed, so the responsive value below is used.
+	function resetAutoplayOnInteraction(selector) {
+		var $carousel = $(selector);
+		if (!$carousel.length) {
+			return;
+		}
+		$carousel.on('dragged.owl.carousel', function() {
+			$(this).trigger('stop.owl.autoplay').trigger('play.owl.autoplay');
+		});
+		$carousel.on('click', '.owl-prev, .owl-next', function() {
+			$(this).closest('.owl-carousel')
+				.trigger('stop.owl.autoplay')
+				.trigger('play.owl.autoplay');
+		});
+	}
+
+	// autoplayTimeout is 9s on mobile (under 768px, matching the CSS
+	// breakpoint) and 12s from there up.
 	$('.owl-features').owlCarousel({
 		items:3,
 		loop:true,
@@ -97,9 +118,14 @@
 		margin:30,
 		responsive:{
 			  0:{
-				  items:1
+				  items:1,
+				  autoplayTimeout: 9000
 			  },
 			  600:{
+				  items:2,
+				  autoplayTimeout: 9000
+			  },
+			  768:{
 				  items:2
 			  },
 			  1200:{
@@ -111,6 +137,8 @@
 		}
 	})
 
+	resetAutoplayOnInteraction('.owl-features');
+
 	$('.owl-collection').owlCarousel({
 		items:3,
 		loop:true,
@@ -121,6 +149,10 @@
 		margin:30,
 		responsive:{
 			  0:{
+				  items:1,
+				  autoplayTimeout: 9000
+			  },
+			  768:{
 				  items:1
 			  },
 			  800:{
@@ -131,6 +163,8 @@
 			}
 		}
 	})
+
+	resetAutoplayOnInteraction('.owl-collection');
 
 	$('.owl-banner').owlCarousel({
 		items:1,
