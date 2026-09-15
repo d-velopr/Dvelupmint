@@ -330,4 +330,47 @@
      fill="#ec6090"
      letter-spacing="1.4"
      id="text30">6-12 PAGES</text>
+  <!-- Promo sticker. The deal has no end date, so the copy makes no urgency
+       claim. To end the promo, delete this whole group. -->
+  <g
+     id="promo-sticker"
+     transform="translate(140,60) rotate(12)">
+    <polygon
+       points="0.00,-38.00 4.77,-33.16 10.71,-36.46 13.92,-30.47 20.54,-31.97 21.94,-25.32 28.72,-24.88 28.18,-18.11 34.57,-15.79 32.14,-9.44 37.61,-5.41 33.50,-0.00 37.61,5.41 32.14,9.44 34.57,15.79 28.18,18.11 28.72,24.88 21.94,25.32 20.54,31.97 13.92,30.47 10.71,36.46 4.77,33.16 0.00,38.00 -4.77,33.16 -10.71,36.46 -13.92,30.47 -20.54,31.97 -21.94,25.32 -28.72,24.88 -28.18,18.11 -34.57,15.79 -32.14,9.44 -37.61,5.41 -33.50,0.00 -37.61,-5.41 -32.14,-9.44 -34.57,-15.79 -28.18,-18.11 -28.72,-24.88 -21.94,-25.32 -20.54,-31.97 -13.92,-30.47 -10.71,-36.46 -4.77,-33.16"
+       fill="#ec6090"
+       stroke="#17191a"
+       stroke-width="1.5"
+       id="promo-burst" />
+    <circle
+       r="28.5"
+       fill="none"
+       stroke="#ffffff"
+       stroke-opacity="0.55"
+       stroke-width="0.8"
+       stroke-dasharray="2 1.6"
+       id="promo-ring" />
+    <text
+       y="-10.5"
+       font-size="5.2px"
+       font-weight="700"
+       fill="#ffffff"
+       letter-spacing="0.5"
+       text-anchor="middle"
+       id="promo-label">PROMO OFFER</text>
+    <text
+       y="0"
+       font-size="7.6px"
+       font-weight="700"
+       fill="#ffffff"
+       letter-spacing="0.8"
+       text-anchor="middle"
+       id="promo-pages">6 PAGES</text>
+    <text
+       y="14.5"
+       font-size="13.5px"
+       font-weight="700"
+       fill="#ffffff"
+       text-anchor="middle"
+       id="promo-price">$1,000</text>
+  </g>
 </svg>
