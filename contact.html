@@ -811,6 +811,23 @@
         var submitButton = document.getElementById("submitButton");
         var honeypot = document.getElementById("company");
 
+        /* Package cards on browse.html link here as ?package=<key>. The values
+           must match the projectType <option> values below. */
+        var PACKAGES = {
+          landing: "Landing Page",
+          basic: "Basic (3-6 pages)",
+          business: "Business (6-12 pages)",
+          enterprise: "Enterprise (12+ pages)",
+          ecommerce: "Online E-Commerce Store",
+          webapp: "Web Application"
+        };
+
+        /* Applied only with &promo=1, which only a card showing the promo
+           sticker sends. Delete an entry when its sticker is removed. */
+        var PROMOS = {
+          business: { budget: "$1,000 - $2,000" }
+        };
+
         var RULES = [
           {
             id: "name",
@@ -1074,6 +1091,20 @@
 
           send(data);
         });
+
+        (function prefillFromCard() {
+          if (typeof URLSearchParams === "undefined") return;
+          var params = new URLSearchParams(window.location.search);
+          var key = params.get("package");
+          if (!key || !PACKAGES.hasOwnProperty(key)) return;
+
+          document.getElementById("projectType").value = PACKAGES[key];
+
+          var promo = params.get("promo") === "1" && PROMOS[key];
+          if (!promo) return;
+
+          document.getElementById("budget").value = promo.budget;
+        })();
 
         /* Once a field has been flagged, clear the flag the moment it is
            fixed — leaving it red after a correct answer is its own bug. */
