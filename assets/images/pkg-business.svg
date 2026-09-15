@@ -335,17 +335,24 @@
   <g
      id="promo-sticker"
      transform="translate(140,60) rotate(12)">
+    <defs>
+      <linearGradient id="promo-gold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#fff1a8" />
+        <stop offset="45%" stop-color="#e6b422" />
+        <stop offset="100%" stop-color="#a8740a" />
+      </linearGradient>
+    </defs>
     <polygon
        points="0.00,-38.00 4.77,-33.16 10.71,-36.46 13.92,-30.47 20.54,-31.97 21.94,-25.32 28.72,-24.88 28.18,-18.11 34.57,-15.79 32.14,-9.44 37.61,-5.41 33.50,-0.00 37.61,5.41 32.14,9.44 34.57,15.79 28.18,18.11 28.72,24.88 21.94,25.32 20.54,31.97 13.92,30.47 10.71,36.46 4.77,33.16 0.00,38.00 -4.77,33.16 -10.71,36.46 -13.92,30.47 -20.54,31.97 -21.94,25.32 -28.72,24.88 -28.18,18.11 -34.57,15.79 -32.14,9.44 -37.61,5.41 -33.50,0.00 -37.61,-5.41 -32.14,-9.44 -34.57,-15.79 -28.18,-18.11 -28.72,-24.88 -21.94,-25.32 -20.54,-31.97 -13.92,-30.47 -10.71,-36.46 -4.77,-33.16"
-       fill="#ec6090"
-       stroke="#17191a"
+       fill="url(#promo-gold)"
+       stroke="#ffffff"
        stroke-width="1.5"
        id="promo-burst" />
     <circle
        r="28.5"
        fill="none"
        stroke="#ffffff"
-       stroke-opacity="0.55"
+       stroke-opacity="0.7"
        stroke-width="0.8"
        stroke-dasharray="2 1.6"
        id="promo-ring" />
