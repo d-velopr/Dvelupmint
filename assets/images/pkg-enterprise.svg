@@ -1,39 +1,268 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183 357" width="183" height="357"
-     role="img" aria-label="Enterprise package" font-family="Poppins, 'Century Gothic', Futura, 'Trebuchet MS', sans-serif">
-  <title>Enterprise package</title>
-  <defs>
-    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ec6090" stop-opacity="0.20"/>
-      <stop offset="100%" stop-color="#ec6090" stop-opacity="0"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 183 357"
+   width="183"
+   height="357"
+   role="img"
+   aria-label="Enterprise package"
+   font-family="Poppins, 'Century Gothic', Futura, 'Trebuchet MS', sans-serif"
+   version="1.1"
+   id="svg21"
+   sodipodi:docname="pkg-enterprise.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview21"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.2072829"
+     inkscape:cx="91.288706"
+     inkscape:cy="178.5"
+     inkscape:window-width="1910"
+     inkscape:window-height="995"
+     inkscape:window-x="0"
+     inkscape:window-y="49"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg21" />
+  <title
+     id="title1">Enterprise package</title>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="glow"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#ec6090"
+         stop-opacity="0.20"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#ec6090"
+         stop-opacity="0"
+         id="stop2" />
     </linearGradient>
   </defs>
-  <rect width="183" height="357" fill="#17191a"/>
-  <rect width="183" height="172" fill="url(#glow)"/>
-  <g transform="translate(91.5,113) scale(1.12) translate(-91.5,-113)">
-    <rect x="70" y="46" width="44" height="24" rx="5" fill="#ec6090" opacity="0.30" stroke="#ec6090"/>
-    <rect x="80" y="55" width="24" height="4" rx="2" fill="#ec6090"/>
-    <path d="M92 70 v22 M44 92 h96 M44 92 v18 M92 92 v18 M140 92 v18" stroke="#2e3132" stroke-width="1.4" fill="none"/>
-    <rect x="28" y="110" width="32" height="22" rx="4" fill="#1f2224" stroke="#2e3132"/>
-    <rect x="35" y="118" width="18" height="3.5" rx="1.75" fill="#7d8385" opacity="0.65"/>
-    <path d="M44 132 v14 M33 146 h22 M33 146 v12 M55 146 v12" stroke="#2e3132" stroke-width="1.2" fill="none"/>
-    <rect x="76" y="110" width="32" height="22" rx="4" fill="#1f2224" stroke="#2e3132"/>
-    <rect x="83" y="118" width="18" height="3.5" rx="1.75" fill="#7d8385" opacity="0.65"/>
-    <path d="M92 132 v14 M81 146 h22 M81 146 v12 M103 146 v12" stroke="#2e3132" stroke-width="1.2" fill="none"/>
-    <rect x="124" y="110" width="32" height="22" rx="4" fill="#1f2224" stroke="#2e3132"/>
-    <rect x="131" y="118" width="18" height="3.5" rx="1.75" fill="#7d8385" opacity="0.65"/>
-    <path d="M140 132 v14 M129 146 h22 M129 146 v12 M151 146 v12" stroke="#2e3132" stroke-width="1.2" fill="none"/>
-    <rect x="27" y="158" width="12" height="12" rx="3" fill="#ec6090" opacity="0.6"/>
-    <rect x="49" y="158" width="12" height="12" rx="3" fill="#2e3132"/>
-    <rect x="75" y="158" width="12" height="12" rx="3" fill="#2e3132"/>
-    <rect x="97" y="158" width="12" height="12" rx="3" fill="#ec6090" opacity="0.6"/>
-    <rect x="123" y="158" width="12" height="12" rx="3" fill="#2e3132"/>
-    <rect x="145" y="158" width="12" height="12" rx="3" fill="#ec6090" opacity="0.6"/>
+  <rect
+     width="183"
+     height="357"
+     fill="#17191a"
+     id="rect2" />
+  <rect
+     width="183"
+     height="172"
+     fill="url(#glow)"
+     id="rect3" />
+  <g
+     transform="translate(91.5,113) scale(1.12) translate(-91.5,-113)"
+     id="g17">
+    <rect
+       x="70"
+       y="46"
+       width="44"
+       height="24"
+       rx="5"
+       fill="#ec6090"
+       opacity="0.30"
+       stroke="#ec6090"
+       id="rect4" />
+    <rect
+       x="80"
+       y="55"
+       width="24"
+       height="4"
+       rx="2"
+       fill="#ec6090"
+       id="rect5" />
+    <path
+       d="M92 70 v22 M44 92 h96 M44 92 v18 M92 92 v18 M140 92 v18"
+       stroke="#2e3132"
+       stroke-width="1.4"
+       fill="none"
+       id="path5" />
+    <rect
+       x="28"
+       y="110"
+       width="32"
+       height="22"
+       rx="4"
+       fill="#1f2224"
+       stroke="#2e3132"
+       id="rect6" />
+    <rect
+       x="35"
+       y="118"
+       width="18"
+       height="3.5"
+       rx="1.75"
+       fill="#7d8385"
+       opacity="0.65"
+       id="rect7" />
+    <path
+       d="M44 132 v14 M33 146 h22 M33 146 v12 M55 146 v12"
+       stroke="#2e3132"
+       stroke-width="1.2"
+       fill="none"
+       id="path7" />
+    <rect
+       x="76"
+       y="110"
+       width="32"
+       height="22"
+       rx="4"
+       fill="#1f2224"
+       stroke="#2e3132"
+       id="rect8" />
+    <rect
+       x="83"
+       y="118"
+       width="18"
+       height="3.5"
+       rx="1.75"
+       fill="#7d8385"
+       opacity="0.65"
+       id="rect9" />
+    <path
+       d="M92 132 v14 M81 146 h22 M81 146 v12 M103 146 v12"
+       stroke="#2e3132"
+       stroke-width="1.2"
+       fill="none"
+       id="path9" />
+    <rect
+       x="124"
+       y="110"
+       width="32"
+       height="22"
+       rx="4"
+       fill="#1f2224"
+       stroke="#2e3132"
+       id="rect10" />
+    <rect
+       x="131"
+       y="118"
+       width="18"
+       height="3.5"
+       rx="1.75"
+       fill="#7d8385"
+       opacity="0.65"
+       id="rect11" />
+    <path
+       d="M140 132 v14 M129 146 h22 M129 146 v12 M151 146 v12"
+       stroke="#2e3132"
+       stroke-width="1.2"
+       fill="none"
+       id="path11" />
+    <rect
+       x="27"
+       y="158"
+       width="12"
+       height="12"
+       rx="3"
+       fill="#ec6090"
+       opacity="0.6"
+       id="rect12" />
+    <rect
+       x="49"
+       y="158"
+       width="12"
+       height="12"
+       rx="3"
+       fill="#2e3132"
+       id="rect13" />
+    <rect
+       x="75"
+       y="158"
+       width="12"
+       height="12"
+       rx="3"
+       fill="#2e3132"
+       id="rect14" />
+    <rect
+       x="97"
+       y="158"
+       width="12"
+       height="12"
+       rx="3"
+       fill="#ec6090"
+       opacity="0.6"
+       id="rect15" />
+    <rect
+       x="123"
+       y="158"
+       width="12"
+       height="12"
+       rx="3"
+       fill="#2e3132"
+       id="rect16" />
+    <rect
+       x="145"
+       y="158"
+       width="12"
+       height="12"
+       rx="3"
+       fill="#ec6090"
+       opacity="0.6"
+       id="rect17" />
   </g>
-  <text x="22" y="224" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="1.1">ENTERPRISE</text>
-  <path d="M22 236 h139" stroke="#2e3132" stroke-width="1"/>
-  <text x="22" y="254" font-size="9" fill="#7d8385">Nine pages and up.</text>
-  <text x="22" y="267" font-size="9" fill="#7d8385">Scale without a rebuild.</text>
-  <path d="M22 284 h139" stroke="#2e3132" stroke-width="1"/>
-  <text x="22" y="310" font-size="14" font-weight="700" fill="#ffffff" letter-spacing="0.3">$3,000–$5,000</text>
-  <text x="22" y="327" font-size="8" font-weight="600" fill="#ec6090" letter-spacing="1.4">9+ PAGES</text>
+  <text
+     x="22"
+     y="270"
+     font-size="12px"
+     font-weight="700"
+     fill="#ffffff"
+     letter-spacing="1.1"
+     id="text17">ENTERPRISE</text>
+  <path
+     d="M 22,236 H 161"
+     stroke="#2e3132"
+     stroke-width="1"
+     id="path17"
+     style="display:none" />
+  <text
+     x="22"
+     y="254"
+     font-size="9px"
+     fill="#7d8385"
+     id="text18"
+     style="display:none">Nine pages and up.</text>
+  <text
+     x="22"
+     y="267"
+     font-size="9px"
+     fill="#7d8385"
+     id="text19"
+     style="display:none">Scale without a rebuild.</text>
+  <path
+     d="M 22,284 H 161"
+     stroke="#2e3132"
+     stroke-width="1"
+     id="path19"
+     style="display:inline" />
+  <text
+     x="22"
+     y="310"
+     font-size="14"
+     font-weight="700"
+     fill="#ffffff"
+     letter-spacing="0.3"
+     id="text20">$3,000–$5,000</text>
+  <text
+     x="22"
+     y="327"
+     font-size="8px"
+     font-weight="600"
+     fill="#ec6090"
+     letter-spacing="1.4"
+     id="text21">12+ PAGES</text>
 </svg>

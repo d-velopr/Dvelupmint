@@ -166,34 +166,38 @@
   </g>
   <text
      x="22"
-     y="224"
-     font-size="12"
+     y="270"
+     font-size="12px"
      font-weight="700"
      fill="#ffffff"
      letter-spacing="1.1"
      id="text14">BASIC</text>
   <path
-     d="M22 236 h139"
+     d="M 22,236 H 161"
      stroke="#2e3132"
      stroke-width="1"
-     id="path14" />
+     id="path14"
+     style="display:none" />
   <text
      x="22"
      y="254"
      font-size="9px"
      fill="#7d8385"
-     id="text15">Grow your business with</text>
+     id="text15"
+     style="display:none">Grow your business with</text>
   <text
      x="22"
      y="267"
      font-size="9px"
      fill="#7d8385"
-     id="text16">your online property.</text>
+     id="text16"
+     style="display:none">your online property.</text>
   <path
-     d="M22 284 h139"
+     d="M 22,284 H 161"
      stroke="#2e3132"
      stroke-width="1"
-     id="path16" />
+     id="path16"
+     style="display:inline" />
   <text
      x="22"
      y="310"
@@ -205,9 +209,9 @@
   <text
      x="22"
      y="327"
-     font-size="8"
+     font-size="8px"
      font-weight="600"
      fill="#ec6090"
      letter-spacing="1.4"
-     id="text18">3–6 PAGES</text>
+     id="text18">3-6 PAGES</text>
 </svg>
